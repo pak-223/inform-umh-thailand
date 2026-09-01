@@ -19,6 +19,13 @@ import {
 import { FormEvent, useMemo, useState } from "react";
 
 const contactEmail = "sale@informrack.com";
+const thailandContact = {
+  name: "Mr.Pakawat Sonprates",
+  position: "Sale (Thailand)",
+  phoneDisplay: "+66 95 653 7674",
+  phoneHref: "tel:+66956537674",
+  lineWechat: "Pakawat-tp",
+};
 
 const copy = {
   th: {
@@ -66,6 +73,8 @@ const copy = {
     finalTitle: "มีโปรเจ็คอยู่แล้ว?",
     finalBody:
       "ส่ง layout, drawing, รูปพื้นที่ หรือ requirement เบื้องต้นมาได้เลย ทีม Thailand จะติดต่อกลับเพื่อคัด requirement และวาง next action",
+    contactTitle: "ติดต่อ Sales Thailand",
+    contactLead: "สำหรับโปรเจ็คในประเทศไทย ติดต่อคุณ Pakawat โดยตรง",
   },
   en: {
     label: "EN",
@@ -112,6 +121,8 @@ const copy = {
     finalTitle: "Already have a project?",
     finalBody:
       "Send the layout, drawing, site photo, or initial requirement. The Thailand team will follow up to qualify the requirement and set the next action.",
+    contactTitle: "Contact Sales Thailand",
+    contactLead: "For Thailand projects, contact Pakawat directly.",
   },
   zh: {
     label: "中文",
@@ -158,6 +169,8 @@ const copy = {
     finalTitle: "已有仓库项目？",
     finalBody:
       "可先提交布局图、图纸、现场照片或初步需求。泰国团队会联系您确认需求并安排下一步。",
+    contactTitle: "联系泰国销售团队",
+    contactLead: "泰国项目请直接联系 Pakawat。",
   },
 };
 
@@ -308,6 +321,11 @@ export default function Home() {
       `Budget range: ${data.get("budget") || ""}`,
       `Interested system: ${selectedSystems.join(", ") || ""}`,
       "",
+      `Thailand sales owner: ${thailandContact.name}`,
+      `Position: ${thailandContact.position}`,
+      `Tel: ${thailandContact.phoneDisplay}`,
+      `Line / WeChat: ${thailandContact.lineWechat}`,
+      "",
       "Please attach layout/drawing/photo if available.",
     ].join("\n");
 
@@ -400,6 +418,23 @@ export default function Home() {
               <div className="rounded border border-white/12 bg-white/8 p-3">
                 <p className="text-2xl font-bold">3</p>
                 <p className="mt-1 text-[11px] text-zinc-300">Solution lanes</p>
+              </div>
+            </div>
+            <div className="mt-5 border-t border-white/12 pt-5">
+              <p className="text-xs font-bold uppercase tracking-[0.12em] text-red-300">
+                {t.contactTitle}
+              </p>
+              <p className="mt-3 text-sm font-semibold text-white">{thailandContact.name}</p>
+              <p className="mt-1 text-sm text-zinc-300">{thailandContact.position}</p>
+              <div className="mt-4 grid gap-2 text-sm text-zinc-100">
+                <a className="inline-flex items-center gap-2 hover:text-white" href={thailandContact.phoneHref}>
+                  <Phone className="h-4 w-4 text-red-300" />
+                  {thailandContact.phoneDisplay}
+                </a>
+                <p className="inline-flex items-center gap-2">
+                  <MessageMark />
+                  Line / WeChat: {thailandContact.lineWechat}
+                </p>
               </div>
             </div>
           </aside>
@@ -515,6 +550,22 @@ export default function Home() {
             <p className="text-sm font-bold uppercase tracking-[0.12em] text-red-600">Project Intake</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t.formTitle}</h2>
             <p className="mt-4 text-base leading-7 text-muted-foreground">{t.formLead}</p>
+            <div className="mt-6 rounded-md border border-zinc-300 bg-white p-5 shadow-sm">
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-red-600">{t.contactTitle}</p>
+              <p className="mt-3 text-lg font-semibold text-zinc-950">{thailandContact.name}</p>
+              <p className="mt-1 text-sm text-zinc-600">{thailandContact.position}</p>
+              <div className="mt-4 grid gap-3 text-sm text-zinc-800">
+                <a className="inline-flex items-center gap-2 font-semibold hover:text-red-600" href={thailandContact.phoneHref}>
+                  <Phone className="h-4 w-4 text-red-600" />
+                  {thailandContact.phoneDisplay}
+                </a>
+                <p className="inline-flex items-center gap-2 font-semibold">
+                  <MessageMark dark />
+                  Line / WeChat: {thailandContact.lineWechat}
+                </p>
+              </div>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">{t.contactLead}</p>
+            </div>
             <div className="mt-8 space-y-3">
               {[
                 "Thailand team owns follow-up",
@@ -601,20 +652,40 @@ export default function Home() {
 
       <footer className="border-t border-border bg-zinc-950 px-4 py-8 text-sm text-zinc-300 sm:px-6 lg:px-8">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
-          <p>Inform Thailand | Warehouse Racking & Automation Solutions</p>
+          <div>
+            <p className="font-semibold text-white">Inform Thailand | Warehouse Racking & Automation Solutions</p>
+            <p className="mt-1">{thailandContact.name} | {thailandContact.position}</p>
+          </div>
           <div className="flex flex-wrap gap-4">
             <a className="inline-flex items-center gap-2 hover:text-white" href={`mailto:${contactEmail}`}>
               <Mail className="h-4 w-4" />
               Thailand project inquiry
             </a>
-            <a className="inline-flex items-center gap-2 hover:text-white" href="tel:+862552726370">
+            <a className="inline-flex items-center gap-2 hover:text-white" href={thailandContact.phoneHref}>
               <Phone className="h-4 w-4" />
-              Parent company reference
+              {thailandContact.phoneDisplay}
             </a>
+            <span className="inline-flex items-center gap-2">
+              <MessageMark />
+              Line / WeChat: {thailandContact.lineWechat}
+            </span>
           </div>
         </div>
       </footer>
     </main>
+  );
+}
+
+function MessageMark({ dark = false }: { dark?: boolean }) {
+  return (
+    <span
+      aria-hidden="true"
+      className={`grid h-4 w-4 flex-none place-items-center rounded-sm text-[9px] font-black ${
+        dark ? "bg-red-600 text-white" : "bg-red-300 text-zinc-950"
+      }`}
+    >
+      M
+    </span>
   );
 }
 
