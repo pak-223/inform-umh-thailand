@@ -209,6 +209,7 @@ const productFamilies = [
   {
     title: "High Precision Rack System",
     href: "https://en.informrack.com/gjmhj.aspx?nid=3&typeid=92",
+    image: "/assets/product-racking.jpg",
     items: [
       "Drive-In Rack",
       "Shuttle Rack",
@@ -223,6 +224,7 @@ const productFamilies = [
   {
     title: "Shuttle System",
     href: "https://en.informrack.com/gjmhj.aspx?nid=3&typeid=94",
+    image: "/assets/product-shuttle.jpg",
     items: [
       "Four-way Pallet Shuttle",
       "Two-way Pallet Shuttle",
@@ -236,6 +238,7 @@ const productFamilies = [
   {
     title: "Stacker Crane / ASRS Direction",
     href: "https://en.informrack.com/sitemap.aspx",
+    image: "/assets/product-asrs.jpg",
     items: [
       "Stacker Crane System",
       "Shuttle + Stacker",
@@ -248,6 +251,7 @@ const productFamilies = [
   {
     title: "WMS / WCS",
     href: "https://en.informrack.com/wmswcs.aspx?nid=3&typeid=95",
+    image: "/assets/product-wms.jpg",
     items: [
       "Warehouse Management System",
       "Warehouse Control System",
@@ -367,7 +371,7 @@ export default function Home() {
 
       <section id="top" className="relative flex min-h-[86svh] items-end overflow-hidden pt-16 text-white">
         <Image
-          src="/assets/inform-rack-catalogue.png"
+          src="/assets/hero-warehouse-automation.jpg"
           alt="Inform rack product catalogue showing warehouse racking reference"
           fill
           priority
@@ -478,27 +482,47 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-10 grid gap-4 md:grid-cols-2">
+          <div className="mt-10 grid gap-5 md:grid-cols-2">
             {productFamilies.map((family) => (
-              <article key={family.title} className="rounded-md border border-border bg-white p-5 shadow-sm">
-                <div className="flex items-start justify-between gap-4">
-                  <h3 className="text-lg font-semibold">{family.title}</h3>
-                  <a
-                    href={family.href}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex flex-none items-center gap-1 rounded border border-zinc-200 px-2 py-1 text-xs font-semibold text-zinc-700 hover:border-red-300 hover:text-red-600"
-                  >
-                    Source
-                    <ExternalLink className="h-3.5 w-3.5" />
-                  </a>
+              <article key={family.title} className="overflow-hidden rounded-md border border-border bg-white shadow-sm">
+                <div className="relative aspect-[16/9] bg-zinc-200">
+                  <Image
+                    src={family.image}
+                    alt={`${family.title} product reference from Inform company materials`}
+                    fill
+                    sizes="(min-width: 768px) 50vw, 100vw"
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-zinc-950/76 to-transparent p-4">
+                    <h3 className="text-lg font-semibold text-white">{family.title}</h3>
+                  </div>
                 </div>
-                <div className="mt-5 flex flex-wrap gap-2">
-                  {family.items.map((item) => (
-                    <span key={item} className="rounded border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm text-zinc-700">
-                      {item}
-                    </span>
-                  ))}
+                <div className="p-5">
+                  <div className="flex flex-wrap gap-2">
+                    {family.items.map((item) => (
+                      <span key={item} className="rounded border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm text-zinc-700">
+                        {item}
+                      </span>
+                    ))}
+                  </div>
+                  <div className="mt-5 flex flex-col gap-2 sm:flex-row">
+                    <a
+                      href="#lead-form"
+                      className="inline-flex items-center justify-center gap-2 rounded-md bg-red-600 px-3 py-2 text-sm font-bold text-white hover:bg-red-500"
+                    >
+                      <Send className="h-4 w-4" />
+                      {t.primaryCta}
+                    </a>
+                    <a
+                      href={family.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="inline-flex items-center justify-center gap-2 rounded-md border border-zinc-200 px-3 py-2 text-sm font-bold text-zinc-800 hover:border-red-300 hover:text-red-600"
+                    >
+                      Source
+                      <ExternalLink className="h-4 w-4" />
+                    </a>
+                  </div>
                 </div>
               </article>
             ))}
