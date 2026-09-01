@@ -23,7 +23,7 @@ const contactEmail = "sale@informrack.com";
 const copy = {
   th: {
     label: "ไทย",
-    nav: ["โซลูชัน", "บริษัทแม่", "ส่ง Requirement"],
+    nav: ["โซลูชัน", "สินค้า", "ส่ง Requirement"],
     badge: "Inform Thailand Project Intake",
     heroTitle: "โซลูชันชั้นวางสินค้าและระบบคลังสินค้าอัตโนมัติในประเทศไทย",
     heroLead:
@@ -57,13 +57,19 @@ const copy = {
       budget: "Budget range",
       system: "ระบบที่สนใจ",
     },
+    productsTitle: "Product Coverage จากเว็บบริษัทแม่",
+    productsLead:
+      "หมวดสินค้าด้านล่างอ้างอิงจาก product center ของ Inform parent site เพื่อให้ลูกค้าเห็นว่าเราขายอะไรและช่วยประเมินอะไรได้บ้าง",
+    industriesTitle: "อุตสาหกรรมที่เหมาะกับโซลูชัน",
+    industriesLead:
+      "ใช้เป็น application areas เบื้องต้น ไม่ใช่ Thailand reference จนกว่าจะมีหลักฐานโปรเจ็คในไทยแยกต่างหาก",
     finalTitle: "มีโปรเจ็คอยู่แล้ว?",
     finalBody:
       "ส่ง layout, drawing, รูปพื้นที่ หรือ requirement เบื้องต้นมาได้เลย ทีม Thailand จะติดต่อกลับเพื่อคัด requirement และวาง next action",
   },
   en: {
     label: "EN",
-    nav: ["Solutions", "Parent Company", "Send Requirement"],
+    nav: ["Solutions", "Products", "Send Requirement"],
     badge: "Inform Thailand Project Intake",
     heroTitle: "Warehouse Racking & Automation Solutions in Thailand",
     heroLead:
@@ -97,13 +103,19 @@ const copy = {
       budget: "Budget range",
       system: "Interested system",
     },
+    productsTitle: "Product Coverage From The Parent Site",
+    productsLead:
+      "These categories are based on Inform parent-site product center references, so visitors can quickly see what we sell and what the Thailand team can help assess.",
+    industriesTitle: "Relevant Application Areas",
+    industriesLead:
+      "Use these as application areas only, not Thailand customer references unless separately verified.",
     finalTitle: "Already have a project?",
     finalBody:
       "Send the layout, drawing, site photo, or initial requirement. The Thailand team will follow up to qualify the requirement and set the next action.",
   },
   zh: {
     label: "中文",
-    nav: ["解决方案", "母公司", "提交需求"],
+    nav: ["解决方案", "产品", "提交需求"],
     badge: "Inform 泰国项目线索入口",
     heroTitle: "泰国仓储货架与自动化仓库解决方案",
     heroLead:
@@ -137,6 +149,12 @@ const copy = {
       budget: "预算范围",
       system: "感兴趣的系统",
     },
+    productsTitle: "来自母公司官网的产品范围",
+    productsLead:
+      "以下类别参考 Inform 母公司产品中心，帮助客户快速了解我们销售哪些产品，以及泰国团队可以评估哪些项目方向。",
+    industriesTitle: "适用行业方向",
+    industriesLead:
+      "以下仅作为应用行业方向，不代表泰国本地客户案例，除非另有验证资料。",
     finalTitle: "已有仓库项目？",
     finalBody:
       "可先提交布局图、图纸、现场照片或初步需求。泰国团队会联系您确认需求并安排下一步。",
@@ -172,6 +190,71 @@ const solutionCards = [
     en: "For new warehouses, expansion, storage capacity increase, replacement, and automation upgrade projects.",
     zh: "适用于新仓建设、扩建、提升仓储容量、设备替换及自动化升级项目。",
   },
+];
+
+const productFamilies = [
+  {
+    title: "High Precision Rack System",
+    href: "https://en.informrack.com/gjmhj.aspx?nid=3&typeid=92",
+    items: [
+      "Drive-In Rack",
+      "Shuttle Rack",
+      "Push Back Rack",
+      "Gravity Rack",
+      "Electric Mobile Racking",
+      "Roller Track-Type Rack",
+      "Cantilever Rack",
+      "High Bay Racking",
+    ],
+  },
+  {
+    title: "Shuttle System",
+    href: "https://en.informrack.com/gjmhj.aspx?nid=3&typeid=94",
+    items: [
+      "Four-way Pallet Shuttle",
+      "Two-way Pallet Shuttle",
+      "Two-Way Tote Shuttle",
+      "Four-Way Tote Shuttle",
+      "Bus Shuttle",
+      "Attic Shuttle",
+      "EMS Shuttle",
+    ],
+  },
+  {
+    title: "Stacker Crane / ASRS Direction",
+    href: "https://en.informrack.com/sitemap.aspx",
+    items: [
+      "Stacker Crane System",
+      "Shuttle + Stacker",
+      "High Bay Storage",
+      "Automated Storage",
+      "Goods-to-Person Picking",
+      "System Integration",
+    ],
+  },
+  {
+    title: "WMS / WCS",
+    href: "https://en.informrack.com/wmswcs.aspx?nid=3&typeid=95",
+    items: [
+      "Warehouse Management System",
+      "Warehouse Control System",
+      "Multi-warehouse Management",
+      "Operation Rule Strategy",
+      "Visual Monitoring",
+      "Task Allocation",
+    ],
+  },
+];
+
+const industries = [
+  "Automobile",
+  "Food & Cold Chain",
+  "Pharmaceutical",
+  "Energy",
+  "Communication",
+  "Liquor",
+  "Manufacturing",
+  "Logistics / 3PL",
 ];
 
 const projectTypes = [
@@ -245,7 +328,7 @@ export default function Home() {
           </a>
           <nav className="hidden items-center gap-6 text-sm text-zinc-200 md:flex">
             <a href="#solutions">{t.nav[0]}</a>
-            <a href="#proof">{t.nav[1]}</a>
+            <a href="#products">{t.nav[1]}</a>
             <a href="#lead-form">{t.nav[2]}</a>
           </nav>
           <div className="flex rounded-md border border-white/18 bg-white/8 p-1">
@@ -341,6 +424,63 @@ export default function Home() {
                 </article>
               );
             })}
+          </div>
+        </div>
+      </section>
+
+      <section id="products" className="border-b border-border bg-zinc-100 py-16">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="grid gap-8 lg:grid-cols-[0.82fr_1.18fr] lg:items-end">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.12em] text-red-600">
+                Parent Site Product Scope
+              </p>
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight sm:text-4xl">{t.productsTitle}</h2>
+              <p className="mt-4 text-base leading-7 text-muted-foreground">{t.productsLead}</p>
+            </div>
+            <div className="rounded-md border border-zinc-300 bg-white p-4 text-sm leading-6 text-zinc-700">
+              Source-backed reference: Inform parent site lists Products Center categories including Intelligent Warehouse and Storage Solution, High Precision Rack System, Stacker Crane System, Shuttle System, and WMS/WCS.
+            </div>
+          </div>
+
+          <div className="mt-10 grid gap-4 md:grid-cols-2">
+            {productFamilies.map((family) => (
+              <article key={family.title} className="rounded-md border border-border bg-white p-5 shadow-sm">
+                <div className="flex items-start justify-between gap-4">
+                  <h3 className="text-lg font-semibold">{family.title}</h3>
+                  <a
+                    href={family.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex flex-none items-center gap-1 rounded border border-zinc-200 px-2 py-1 text-xs font-semibold text-zinc-700 hover:border-red-300 hover:text-red-600"
+                  >
+                    Source
+                    <ExternalLink className="h-3.5 w-3.5" />
+                  </a>
+                </div>
+                <div className="mt-5 flex flex-wrap gap-2">
+                  {family.items.map((item) => (
+                    <span key={item} className="rounded border border-zinc-200 bg-zinc-50 px-3 py-1.5 text-sm text-zinc-700">
+                      {item}
+                    </span>
+                  ))}
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-10 grid gap-6 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+            <div>
+              <h3 className="text-2xl font-semibold tracking-tight">{t.industriesTitle}</h3>
+              <p className="mt-3 text-sm leading-6 text-muted-foreground">{t.industriesLead}</p>
+            </div>
+            <div className="flex flex-wrap gap-2">
+              {industries.map((industry) => (
+                <span key={industry} className="rounded-md bg-zinc-950 px-3 py-2 text-sm font-semibold text-white">
+                  {industry}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </section>
