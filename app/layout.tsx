@@ -13,14 +13,46 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: 'Inform Thailand | Warehouse Racking & Automation Solutions',
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://inform-umh-thailand.pages.dev'),
+  title: {
+    default: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
+    template: '%s | INFORM-UMH Thailand',
+  },
   description:
-    'Three-language Thailand project intake page for warehouse racking, automation, WMS/WCS, and solution consultation.',
+    'Contact INFORM-UMH Thailand for warehouse racking, AS/RS, shuttle systems, stacker cranes, AGV, WMS/WCS, and automated warehouse project consultation.',
+  keywords: [
+    'warehouse racking Thailand',
+    'ASRS Thailand',
+    'automated warehouse Thailand',
+    'warehouse automation Thailand',
+    'shuttle system Thailand',
+    'stacker crane Thailand',
+    'WMS WCS Thailand',
+    'คลังสินค้าอัตโนมัติ',
+    'ชั้นวางสินค้าอุตสาหกรรม',
+    'ระบบ AS/RS',
+    '货架 泰国',
+    '自动化仓库 泰国',
+  ],
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
-    title: 'Inform Thailand | Warehouse Racking & Automation Solutions',
+    title: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
     description:
-      'Send layout or requirement to the Thailand team for warehouse racking and automation project review.',
-    images: ['/assets/inform-rack-catalogue.png'],
+      'Send layout or requirement to the INFORM-UMH Thailand team for warehouse racking and automation project review.',
+    url: '/',
+    siteName: 'INFORM-UMH Thailand',
+    images: ['/assets/parent-site/full-system-overview.png'],
+    locale: 'th_TH',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
+    description:
+      'Warehouse racking, shuttle systems, stacker cranes, AGV, WMS/WCS, and automation project consultation in Thailand.',
+    images: ['/assets/parent-site/full-system-overview.png'],
   },
 };
 
