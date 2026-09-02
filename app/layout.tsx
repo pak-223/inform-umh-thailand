@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://inform-umh-thailand.pages.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://inform-umh-thailand.sonpra0112.workers.dev'),
   title: {
     default: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
     template: '%s | INFORM-UMH Thailand',

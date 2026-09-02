@@ -544,7 +544,7 @@ const systems = [
 
 type Lang = keyof typeof copy;
 
-const siteUrl = "https://inform-umh-thailand.pages.dev";
+const siteUrl = "https://inform-umh-thailand.sonpra0112.workers.dev";
 const organizationJsonLd = {
   "@context": "https://schema.org",
   "@graph": [
