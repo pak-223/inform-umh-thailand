@@ -43,7 +43,7 @@ const copy = {
     badge: thailandCompany,
     heroTitle: "โซลูชันระบบคลังสินค้าอัตโนมัติ และชั้นวางสินค้าอุตสาหกรรมระดับโลก",
     heroLead:
-      "ยกระดับประสิทธิภาพคลังสินค้าด้วยเทคโนโลยีคลังสินค้าอัตโนมัติ (AS/RS), ระบบ Four-way Shuttle, Stacker Crane และ WMS/WCS มาตรฐานวิศวกรรมระดับสากล พร้อมทีมงานวิศวกรและฝ่ายขายดูแลในประเทศไทย",
+      "ยกระดับประสิทธิภาพคลังสินค้าด้วยเทคโนโลยีคลังสินค้าอัตโนมัติ (AS/RS), ระบบ Four-way Shuttle, Stacker Crane และ WMS/WCS สำหรับโรงงานและศูนย์กระจายสินค้าในไทย รวมถึงชลบุรี ระยอง ฉะเชิงเทรา ปราจีนบุรี และพื้นที่ EEC พร้อมทีมงานวิศวกรและฝ่ายขายดูแลในประเทศไทย",
     primaryCta: "ปรึกษาโปรเจกต์ & ขอประเมินราคา",
     secondaryCta: "สำรวจโซลูชันระบบคลังสินค้า",
     credibility: "ก่อตั้งปี 1997 | Listed 603066 (SSE)",
@@ -99,6 +99,10 @@ const copy = {
     finalTitle: "พร้อมยกระดับคลังสินค้าของคุณแล้วหรือยัง?",
     finalBody:
       "ส่ง Layout, Drawing หรือโจทย์ความต้องการเบื้องต้นให้ทีมงาน Thailand ช่วยประเมินและออกแบบโซลูชันที่คุ้มค่าที่สุด",
+    serviceAreaTitle: "รองรับโปรเจกต์คลังสินค้าในชลบุรีและภาคตะวันออก",
+    serviceAreaLead:
+      "เหมาะสำหรับโรงงาน นิคมอุตสาหกรรม ศูนย์กระจายสินค้า และคลัง 3PL ที่ต้องการออกแบบชั้นวางสินค้าอุตสาหกรรม เพิ่ม pallet capacity หรือประเมินระบบ AS/RS, Shuttle, Stacker Crane และ WMS/WCS ในพื้นที่ Eastern Seaboard / EEC",
+    serviceAreaCta: "ดูบริการสำหรับชลบุรี / EEC",
     contactTitle: "ติดต่อทีมงาน Sales & Engineering Thailand",
     contactLead: "ปรึกษาโปรเจกต์ ติดต่อคุณ Pakawat ได้โดยตรงทุกวัน",
     qrTitle: "สแกนเพื่อเพิ่มเพื่อน (LINE / WeChat)",
@@ -109,7 +113,7 @@ const copy = {
     badge: thailandCompany,
     heroTitle: "World-Class Warehouse Racking & Automation Solutions",
     heroLead:
-      "Transforming warehouse logistics with advanced Automated Storage & Retrieval Systems (AS/RS), Four-way Shuttles, Stacker Cranes, and Intelligent WMS/WCS software. Engineering excellence supported by local Thailand experts.",
+      "Transforming warehouse logistics with advanced Automated Storage & Retrieval Systems (AS/RS), Four-way Shuttles, Stacker Cranes, and Intelligent WMS/WCS software for projects across Thailand, including Chonburi, Rayong, Chachoengsao, Prachinburi, and the Eastern Seaboard / EEC.",
     primaryCta: "Project Consultation & Quote",
     secondaryCta: "Explore Warehouse Solutions",
     credibility: "Founded 1997 | SSE Listed 603066",
@@ -165,6 +169,10 @@ const copy = {
     finalTitle: "Ready to Upgrade Your Warehouse Operations?",
     finalBody:
       "Send your layout drawing or project requirements to our Thailand team for initial engineering review.",
+    serviceAreaTitle: "Warehouse racking and automation support for Chonburi and Eastern Thailand",
+    serviceAreaLead:
+      "Built for manufacturers, industrial estates, distribution centers, and 3PL warehouses planning pallet racking, storage capacity improvement, AS/RS, shuttle systems, stacker cranes, or WMS/WCS projects in the Eastern Seaboard / EEC.",
+    serviceAreaCta: "View Chonburi / EEC Service Page",
     contactTitle: "Contact Thailand Sales & Engineering",
     contactLead: "For Thailand projects, contact Pakawat directly.",
     qrTitle: "Scan QR Code (LINE / WeChat)",
@@ -175,7 +183,7 @@ const copy = {
     badge: thailandCompany,
     heroTitle: "全球领先的智能仓储货架与自动化物流解决方案",
     heroLead:
-      "采用先进的自动化立库 (AS/RS)、四向穿梭车、堆垛机及 WMS/WCS 智能管理软件，全面提升仓库空间利用率与作业效率。全球工程标准，泰国本地专业团队全方位服务。",
+      "采用先进的自动化立库 (AS/RS)、四向穿梭车、堆垛机及 WMS/WCS 智能管理软件，服务泰国本地仓储项目，包括春武里、罗勇、北柳、巴真武里及 Eastern Seaboard / EEC 区域。",
     primaryCta: "项目咨询与报价",
     secondaryCta: "浏览仓储解决方案",
     credibility: "成立于 1997 | 沪市上市 (603066)",
@@ -231,6 +239,10 @@ const copy = {
     finalTitle: "准备好升级您的仓库系统了吗？",
     finalBody:
       "欢迎发送平面图或初步需求，泰国本地团队将为您进行初步技术评估与方案规划。",
+    serviceAreaTitle: "服务春武里与泰国东部工业区的仓储项目",
+    serviceAreaLead:
+      "适用于制造工厂、工业园区、配送中心及 3PL 仓库，在 Eastern Seaboard / EEC 区域规划货架、仓储容量提升、AS/RS、穿梭车、堆垛机或 WMS/WCS 系统。",
+    serviceAreaCta: "查看春武里 / EEC 服务页面",
     contactTitle: "联系泰国销售与工程团队",
     contactLead: "泰国项目请直接联系 Pakawat。",
     qrTitle: "扫描二维码添加好友 (LINE / WeChat)",
@@ -524,6 +536,29 @@ const industries = [
   { name: "3PL & E-Commerce Center", desc: "ผู้ให้บริการคลังสินค้า 3PL" },
 ];
 
+const serviceAreas = [
+  {
+    name: "Chonburi / ชลบุรี",
+    desc: "Warehouse racking, AS/RS, Shuttle และ automation สำหรับโรงงานและนิคมอุตสาหกรรม",
+  },
+  {
+    name: "Rayong / ระยอง",
+    desc: "ระบบจัดเก็บและคลังสินค้าอัตโนมัติสำหรับ manufacturing, automotive และ logistics",
+  },
+  {
+    name: "Chachoengsao / ฉะเชิงเทรา",
+    desc: "วาง layout ชั้นวางสินค้า เพิ่มพื้นที่จัดเก็บ และเชื่อมต่อ WMS/WCS",
+  },
+  {
+    name: "Prachinburi / ปราจีนบุรี",
+    desc: "ประเมินระบบ pallet rack, shuttle rack และ high-bay storage สำหรับคลังโรงงาน",
+  },
+  {
+    name: "Eastern Seaboard / EEC",
+    desc: "รองรับโปรเจกต์คลังสินค้าในภาคตะวันออกและเขตพัฒนาพิเศษภาคตะวันออก",
+  },
+];
+
 const projectTypes = [
   "สร้างคลังสินค้าใหม่ (New Warehouse)",
   "ขยายพื้นที่จัดเก็บเดิม (Expansion)",
@@ -556,7 +591,7 @@ const organizationJsonLd = {
       logo: `${siteUrl}${thailandLogo}`,
       email: contactEmail,
       telephone: thailandContact.phoneDisplay,
-      areaServed: "Thailand",
+      areaServed: ["Thailand", "Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC"],
       parentOrganization: {
         "@type": "Organization",
         name: "Nanjing Inform Storage Group",
@@ -574,7 +609,7 @@ const organizationJsonLd = {
       url: siteUrl,
       email: contactEmail,
       telephone: thailandContact.phoneDisplay,
-      areaServed: "Thailand",
+      areaServed: ["Thailand", "Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC"],
       address: {
         "@type": "PostalAddress",
         addressCountry: "TH",
@@ -608,6 +643,10 @@ const organizationJsonLd = {
         "@id": `${siteUrl}/#organization`,
       },
       areaServed: "Thailand",
+      audience: {
+        "@type": "BusinessAudience",
+        geographicArea: ["Thailand", "Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC"],
+      },
       hasOfferCatalog: {
         "@type": "OfferCatalog",
         name: "Warehouse storage and automation solutions",
@@ -1143,6 +1182,40 @@ export default function Home() {
                   <p className="text-xs text-zinc-600">{ind.desc}</p>
                 </div>
               ))}
+            </div>
+          </div>
+
+          <div className="mt-16 rounded-3xl border border-red-100 bg-red-50/60 p-6 sm:p-8">
+            <div className="grid gap-8 lg:grid-cols-[0.9fr_1.1fr] lg:items-center">
+              <div>
+                <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+                  Chonburi / Eastern Thailand / EEC
+                </span>
+                <h3 className="mt-3 text-2xl font-bold text-zinc-950 sm:text-3xl">
+                  {t.serviceAreaTitle}
+                </h3>
+                <p className="mt-4 text-sm leading-relaxed text-zinc-700">
+                  {t.serviceAreaLead}
+                </p>
+                <a
+                  href="/warehouse-racking-chonburi-eec"
+                  className="mt-6 inline-flex items-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-bold text-white transition hover:bg-red-500"
+                >
+                  {t.serviceAreaCta}
+                  <ArrowRight className="h-3.5 w-3.5" />
+                </a>
+              </div>
+              <div className="grid gap-3 sm:grid-cols-2">
+                {serviceAreas.map((area) => (
+                  <div
+                    key={area.name}
+                    className="rounded-2xl border border-white bg-white p-4 shadow-sm shadow-red-100/80"
+                  >
+                    <p className="text-sm font-bold text-zinc-950">{area.name}</p>
+                    <p className="mt-2 text-xs leading-relaxed text-zinc-600">{area.desc}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
