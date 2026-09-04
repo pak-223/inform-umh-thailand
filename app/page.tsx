@@ -85,7 +85,7 @@ const copy = {
       "Inform มีระบบให้เลือกตั้งแต่โซลูชันกึ่งอัตโนมัติสำหรับเพิ่มความจุ ไปจนถึงระบบคลังสินค้าอัตโนมัติเต็มรูปแบบสำหรับงานที่ต้องการ throughput และความแม่นยำสูง",
     manufacturingTitle: "กำลังผลิตและวิศวกรรมจากเครือ Inform Storage Group",
     manufacturingLead:
-      "Inform Storage Group มีฐานผลิตและทีมสนับสนุนในหลายพื้นที่ รวมถึง Thailand plant พร้อมสภาพแวดล้อมสำหรับทดสอบ Shuttle, AGV, Conveyor และ WMS/WCS เพื่อสนับสนุนงานออกแบบระบบก่อนนำไปใช้จริง",
+      "Inform Storage Group มีฐานผลิตและทีมสนับสนุนในหลายพื้นที่ รวมถึง Thailand plant พร้อมสภาพแวดล้อมสำหรับทดสอบ Shuttle, AGV, Conveyor และ WMS/WCS ลูกค้าที่มีโปรเจกต์จริงสามารถนัดหมายเพื่อเยี่ยมชมโรงงานหรือดูแนวทางระบบก่อนตัดสินใจลงทุนได้",
     referencesTitle: "ตัวอย่างลูกค้าและเคสอ้างอิงระดับสากล",
     referencesLead:
       "ดูตัวอย่างอุตสาหกรรมและโปรเจกต์ที่ Inform Storage Group เคยรองรับ เพื่อประเมินแนวทางที่อาจเหมาะกับคลังสินค้าในประเทศไทยของคุณ",
@@ -155,7 +155,7 @@ const copy = {
       "Inform offers a practical range of systems, from semi-automated storage upgrades to fully automated warehouse solutions for higher-throughput operations.",
     manufacturingTitle: "Manufacturing and engineering capability from Inform Storage Group",
     manufacturingLead:
-      "Inform Storage Group operates across multiple production bases, including a Thailand plant, with test environments for shuttle, AGV, conveyor, and WMS/WCS integrated systems.",
+      "Inform Storage Group operates across multiple production bases, including a Thailand plant, with test environments for shuttle, AGV, conveyor, and WMS/WCS integrated systems. Qualified project teams can request a factory visit or system discussion before investment decisions.",
     referencesTitle: "Global customer and project references",
     referencesLead:
       "Explore industries and project examples supported by Inform Storage Group, then share your Thailand warehouse requirements for a local project review.",
@@ -225,7 +225,7 @@ const copy = {
       "Inform 提供从半自动化存储升级到全自动化立体仓库的多种系统选择，适用于高效率、高吞吐量的仓储运营场景。",
     manufacturingTitle: "Inform Storage Group 的制造与工程能力",
     manufacturingLead:
-      "Inform Storage Group 拥有多个生产基地，包括 Thailand plant，并具备穿梭车、AGV、输送线及 WMS/WCS 集成系统的测试环境。",
+      "Inform Storage Group 拥有多个生产基地，包括 Thailand plant，并具备穿梭车、AGV、输送线及 WMS/WCS 集成系统的测试环境。有实际项目需求的客户可预约参观工厂或进行系统方案交流。",
     referencesTitle: "全球客户与项目案例参考",
     referencesLead:
       "了解 Inform Storage Group 服务过的行业与项目类型，并将泰国仓库需求提交给本地团队进行方案评估。",
@@ -589,6 +589,11 @@ const seoRouteLinks = [
     href: "/warehouse-storage-capacity-optimization-thailand",
     title: "เพิ่มพื้นที่จัดเก็บคลังสินค้า",
     desc: "เริ่มจาก layout, pallet capacity, product flow และแผนขยายคลัง",
+  },
+  {
+    href: "/factory-visit-warehouse-automation-thailand",
+    title: "นัดเยี่ยมชมโรงงานและดูระบบจริง",
+    desc: "สำหรับทีมจัดซื้อ วิศวกร หรือผู้บริหารที่มีโปรเจกต์คลังสินค้าและต้องการความมั่นใจก่อนลงทุน",
   },
 ];
 

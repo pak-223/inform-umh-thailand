@@ -9,6 +9,7 @@ const seoRoutes = [
   "stacker-crane-thailand",
   "wms-wcs-warehouse-software-thailand",
   "warehouse-storage-capacity-optimization-thailand",
+  "factory-visit-warehouse-automation-thailand",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

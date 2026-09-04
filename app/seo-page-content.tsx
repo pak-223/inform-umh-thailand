@@ -289,6 +289,49 @@ export const seoPages: SeoPageConfig[] = [
       },
     ],
   },
+  {
+    slug: "factory-visit-warehouse-automation-thailand",
+    title: "นัดเยี่ยมชมโรงงานและดูแนวทางระบบคลังสินค้าอัตโนมัติก่อนลงทุน",
+    metaTitle: "เยี่ยมชมโรงงานระบบคลังสินค้าอัตโนมัติ Thailand",
+    description:
+      "สำหรับทีมจัดซื้อ วิศวกร และผู้บริหารที่มีโปรเจกต์คลังสินค้า สามารถนัดคุยทีม Thailand เพื่อเยี่ยมชมโรงงาน ดูแนวทางระบบ racking, AS/RS, shuttle, stacker crane และ WMS/WCS ก่อนตัดสินใจลงทุน",
+    eyebrow: "Factory Visit / Project Review",
+    lead:
+      "โปรเจกต์คลังสินค้าเป็นการลงทุนใหญ่ ลูกค้าไม่จำเป็นต้องตัดสินใจจากหน้าเว็บเพียงอย่างเดียว หากมี layout หรือ requirement เบื้องต้น สามารถนัดหมายกับทีม Thailand เพื่อคุยโจทย์ ดูแนวทางระบบ และวางแผนเยี่ยมชมโรงงานหรือ reference ที่เกี่ยวข้องได้",
+    image: "/assets/parent-site/full-system-overview.png",
+    imageAlt: "นัดเยี่ยมชมโรงงานและดูระบบคลังสินค้าอัตโนมัติ AS/RS shuttle stacker crane",
+    fitTitle: "เหมาะกับใคร",
+    fitPoints: [
+      "ทีมจัดซื้อที่กำลังคัดเลือก supplier ระบบคลังสินค้า",
+      "วิศวกรหรือ project team ที่ต้องการเห็นภาพระบบก่อนสรุป specification",
+      "ผู้บริหารที่ต้องการประเมินความน่าเชื่อถือก่อนลงทุน",
+      "ทีมที่มี layout แล้วและต้องการหารือ racking, AS/RS, shuttle หรือ WMS/WCS",
+    ],
+    buyerTitle: "สิ่งที่ควรส่งมาก่อนนัดหมาย",
+    buyerPoints: [
+      "layout หรือ drawing ของพื้นที่คลังสินค้า",
+      "ประเภทสินค้า, pallet size, pallet weight และ target capacity",
+      "timeline โครงการและเป้าหมายทาง operation",
+      "ระบบที่สนใจ เช่น pallet rack, shuttle, stacker crane, AS/RS หรือ WMS/WCS",
+    ],
+    faq: [
+      {
+        question: "ลูกค้าสามารถนัดเยี่ยมชมโรงงานได้ไหม?",
+        answer:
+          "ได้ หากเป็นทีมที่มีโปรเจกต์จริงหรือกำลังประเมินระบบ ทีม Thailand สามารถรับ requirement และประสานแนวทางนัดหมายเพื่อเยี่ยมชมโรงงานหรือพูดคุยระบบที่เกี่ยวข้องได้",
+      },
+      {
+        question: "ก่อนเยี่ยมชมโรงงานต้องเตรียมอะไร?",
+        answer:
+          "ควรเตรียม layout, ขนาดคลัง, ประเภทสินค้า, pallet capacity และโจทย์ที่ต้องการแก้ เพื่อให้การพูดคุยตรงกับระบบที่เหมาะสม",
+      },
+      {
+        question: "ถ้ายังไม่แน่ใจว่าจะใช้ระบบอะไร ควรติดต่อไหม?",
+        answer:
+          "ควรติดต่อได้เลย ทีม Thailand สามารถช่วยดูโจทย์ก่อนว่าเหมาะกับ racking, shuttle, stacker crane, AS/RS หรือควรเริ่มจาก layout optimization",
+      },
+    ],
+  },
 ];
 
 export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
