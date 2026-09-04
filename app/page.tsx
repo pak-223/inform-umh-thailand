@@ -559,6 +559,39 @@ const serviceAreas = [
   },
 ];
 
+const seoRouteLinks = [
+  {
+    href: "/warehouse-racking-thailand",
+    title: "รับออกแบบชั้นวางสินค้าอุตสาหกรรม",
+    desc: "Pallet rack, selective rack, drive-in, push back และ high-bay racking",
+  },
+  {
+    href: "/asrs-warehouse-automation-thailand",
+    title: "ระบบ AS/RS และคลังสินค้าอัตโนมัติ",
+    desc: "ประเมิน automated storage, stacker crane, shuttle และ software integration",
+  },
+  {
+    href: "/shuttle-rack-system-thailand",
+    title: "Shuttle Rack System",
+    desc: "เพิ่มความหนาแน่นการจัดเก็บและลดการเดินรถ forklift ในคลัง",
+  },
+  {
+    href: "/stacker-crane-thailand",
+    title: "Stacker Crane AS/RS",
+    desc: "ระบบจัดเก็บแนวสูงสำหรับ high-bay warehouse และ pallet AS/RS",
+  },
+  {
+    href: "/wms-wcs-warehouse-software-thailand",
+    title: "WMS / WCS Warehouse Software",
+    desc: "เชื่อม inventory, machine control, monitoring และ ERP/SAP",
+  },
+  {
+    href: "/warehouse-storage-capacity-optimization-thailand",
+    title: "เพิ่มพื้นที่จัดเก็บคลังสินค้า",
+    desc: "เริ่มจาก layout, pallet capacity, product flow และแผนขยายคลัง",
+  },
+];
+
 const projectTypes = [
   "สร้างคลังสินค้าใหม่ (New Warehouse)",
   "ขยายพื้นที่จัดเก็บเดิม (Expansion)",
@@ -1216,6 +1249,36 @@ export default function Home() {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+
+          <div className="mt-16 pt-12 border-t border-zinc-200">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+                Search Topics
+              </span>
+              <h3 className="mt-3 text-2xl font-bold text-zinc-950 sm:text-3xl">
+                เลือกหัวข้อที่ตรงกับโปรเจกต์คลังสินค้าของคุณ
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                หน้าเหล่านี้ช่วยให้ทีมจัดซื้อและวิศวกรค้นหาโซลูชันตามโจทย์จริง แล้วส่งข้อมูลให้ทีม Thailand ประเมินต่อได้ทันที
+              </p>
+            </div>
+            <div className="mt-8 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {seoRouteLinks.map((route) => (
+                <a
+                  key={route.href}
+                  href={route.href}
+                  className="group rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm shadow-zinc-100 transition hover:border-red-300 hover:shadow-red-100"
+                >
+                  <p className="text-base font-bold text-zinc-950 group-hover:text-red-700">{route.title}</p>
+                  <p className="mt-2 text-xs leading-relaxed text-zinc-600">{route.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-red-600">
+                    อ่านรายละเอียด
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </div>
