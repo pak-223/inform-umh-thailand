@@ -27,6 +27,9 @@ export type SeoPageConfig = {
   fitPoints: string[];
   buyerTitle: string;
   buyerPoints: string[];
+  evaluationTitle: string;
+  evaluationLead: string;
+  evaluationPoints: string[];
   faq: Array<{ question: string; answer: string }>;
 };
 
@@ -55,6 +58,15 @@ export const seoPages: SeoPageConfig[] = [
       "ขนาด pallet, น้ำหนักสินค้า และประเภทสินค้า",
       "จำนวน pallet ปัจจุบันและ target capacity",
       "รูปแบบรับเข้า-จ่ายออก และข้อจำกัดของ forklift aisle",
+    ],
+    evaluationTitle: "ปัจจัยที่ใช้ประเมินราคาชั้นวางสินค้า",
+    evaluationLead:
+      "ราคาของ pallet rack ไม่ได้ขึ้นอยู่กับจำนวนช่องจัดเก็บเพียงอย่างเดียว การประเมินที่แม่นยำต้องดูน้ำหนักต่อ pallet ความสูง จำนวนระดับจัดเก็บ โครงสร้างพื้น และอุปกรณ์ป้องกันที่ต้องใช้ร่วมกัน",
+    evaluationPoints: [
+      "ชนิดของ rack และจำนวน pallet position ที่ต้องการ",
+      "ขนาดและน้ำหนักต่อ pallet รวมถึงระยะยื่นของสินค้า",
+      "ความสูงอาคาร จำนวน beam level และข้อจำกัดของ forklift",
+      "งานติดตั้ง อุปกรณ์ป้องกัน และข้อกำหนดความปลอดภัยของพื้นที่",
     ],
     faq: [
       {
@@ -99,6 +111,15 @@ export const seoPages: SeoPageConfig[] = [
       "Conveyor, AGV/RGV และ goods-to-person picking",
       "WMS/WCS สำหรับจัดการ inventory และควบคุม equipment",
     ],
+    evaluationTitle: "ระบบ AS/RS ราคาเท่าไร และประเมินจากอะไร",
+    evaluationLead:
+      "ระบบ AS/RS ไม่มีราคากลางที่ใช้ได้กับทุกโครงการ เพราะงบลงทุนขึ้นอยู่กับ capacity, throughput, ความสูงอาคาร จำนวน aisle เครื่องจักร และขอบเขต software การเริ่มจาก layout และข้อมูล operation จะช่วยให้เปรียบเทียบแนวทางได้ตรงกว่าการเทียบราคาเครื่องจักรเพียงรายการเดียว",
+    evaluationPoints: [
+      "จำนวนตำแหน่งจัดเก็บและความสูงที่ใช้งานได้จริง",
+      "จำนวน pallet หรือกล่องที่ต้องรับเข้าและจ่ายออกต่อชั่วโมง",
+      "รูปแบบเครื่องจักร เช่น Stacker Crane, Shuttle, Conveyor หรือ AGV",
+      "ขอบเขต WMS/WCS, ERP integration, installation, testing และ training",
+    ],
     faq: [
       {
         question: "AS/RS ต่างจาก racking ทั่วไปอย่างไร?",
@@ -141,6 +162,15 @@ export const seoPages: SeoPageConfig[] = [
       "อัตราการรับเข้า-จ่ายออกต่อวัน",
       "FIFO, LIFO หรือข้อกำหนดด้าน lot/expiry",
       "พื้นที่ aisle, docking, staging และ charging/maintenance",
+    ],
+    evaluationTitle: "ปัจจัยที่กำหนดขอบเขตและราคา Shuttle Rack",
+    evaluationLead:
+      "การเลือก Shuttle ต้องสมดุลระหว่างจำนวน lane ความลึก จำนวนรถ shuttle และความเร็วที่ต้องการ ระบบที่เน้นความจุสูงอาจใช้ configuration ต่างจากระบบที่ต้องรับคำสั่งเข้าออกถี่ตลอดวัน",
+    evaluationPoints: [
+      "จำนวน lane ความลึกของแต่ละ lane และจำนวน pallet ต่อ SKU",
+      "จำนวน shuttle, lifter และจุดรับส่งที่ต้องทำงานพร้อมกัน",
+      "เงื่อนไข FIFO/LIFO และการควบคุม lot หรือวันหมดอายุ",
+      "อุณหภูมิพื้นที่ ระบบชาร์จ และแผนบำรุงรักษา",
     ],
     faq: [
       {
@@ -185,6 +215,15 @@ export const seoPages: SeoPageConfig[] = [
       "จำนวนช่องจัดเก็บและ movement ต่อชั่วโมง",
       "integration ที่ต้องเชื่อมกับ ERP, WMS หรือ production line",
     ],
+    evaluationTitle: "ปัจจัยที่ใช้ประเมิน Stacker Crane AS/RS",
+    evaluationLead:
+      "งบของ Stacker Crane ขึ้นอยู่กับความสูง ระยะวิ่ง จำนวน aisle และความเร็วที่ต้องการ รวมถึงอุปกรณ์รับส่งสินค้าหน้า aisle การประเมินจึงต้องมองทั้งระบบตั้งแต่ inbound จนถึง outbound",
+    evaluationPoints: [
+      "ความสูงและความยาว aisle รวมถึงจำนวน crane ที่ต้องใช้",
+      "น้ำหนัก ขนาด และคุณภาพ pallet ที่เข้าสู่ระบบ",
+      "throughput ต่อชั่วโมงและระดับ redundancy ที่โครงการต้องการ",
+      "conveyor, transfer car, fire protection และ software integration",
+    ],
     faq: [
       {
         question: "Stacker Crane ต้องใช้กับคลังใหม่เท่านั้นไหม?",
@@ -227,6 +266,15 @@ export const seoPages: SeoPageConfig[] = [
       "ข้อมูล SKU, lot, expiry, serial หรือ traceability",
       "ระบบ ERP/SAP หรือ database ที่ต้องเชื่อมต่อ",
       "report, dashboard และ approval flow ที่ต้องใช้จริง",
+    ],
+    evaluationTitle: "ขอบเขตที่มีผลต่อราคา WMS / WCS",
+    evaluationLead:
+      "ราคาซอฟต์แวร์ขึ้นอยู่กับจำนวน process ที่ต้องควบคุม จำนวนจุดเชื่อมต่อ และระดับ customization ระบบคลังที่มี automation หลายชนิดจะต้องออกแบบ interface และทดสอบการทำงานร่วมกันมากกว่าคลัง manual",
+    evaluationPoints: [
+      "จำนวน user, warehouse, SKU และ transaction ต่อวัน",
+      "การเชื่อม ERP, production system, barcode หรือ RFID",
+      "ชนิดและจำนวนอุปกรณ์ automation ที่ WCS ต้องควบคุม",
+      "report, traceability, testing, training และบริการหลังเริ่มใช้งาน",
     ],
     faq: [
       {
@@ -271,6 +319,15 @@ export const seoPages: SeoPageConfig[] = [
       "target capacity และ movement ต่อวัน",
       "timeline, budget direction และแผนขยายในอนาคต",
     ],
+    evaluationTitle: "วิธีประเมินว่าจะเพิ่มความจุด้วยระบบใด",
+    evaluationLead:
+      "การเพิ่ม pallet capacity ที่ดีต้องไม่ทำให้ทางวิ่งและจุด staging กลายเป็นคอขวด ทีมจะเปรียบเทียบทางเลือกตั้งแต่ปรับ layout, เปลี่ยนชนิด rack ไปจนถึง Shuttle หรือ AS/RS จากข้อมูลการใช้งานจริง",
+    evaluationPoints: [
+      "คำนวณพื้นที่ใช้จริงและจำนวน pallet position ปัจจุบัน",
+      "ตรวจความสูงว่าง ระยะเสา ทางหนีไฟ และพื้นที่ staging",
+      "เทียบ capacity ที่เพิ่มขึ้นกับ throughput และรูปแบบการหยิบ",
+      "วางทางเลือกตามงบประมาณ ระยะคืนทุน และแผนขยายในอนาคต",
+    ],
     faq: [
       {
         question: "อยากเพิ่ม pallet capacity ต้องเริ่มจากอะไร?",
@@ -314,6 +371,15 @@ export const seoPages: SeoPageConfig[] = [
       "timeline โครงการและเป้าหมายทาง operation",
       "ระบบที่สนใจ เช่น pallet rack, shuttle, stacker crane, AS/RS หรือ WMS/WCS",
     ],
+    evaluationTitle: "ขั้นตอนนัดเยี่ยมชมโรงงานสำหรับทีมโครงการ",
+    evaluationLead:
+      "การเยี่ยมชมจะมีประโยชน์ที่สุดเมื่อทีม Thailand ทราบโจทย์ล่วงหน้า เพื่อจัดหัวข้อสนทนาและระบบที่เกี่ยวข้องกับโครงการจริง การนัดหมายขึ้นอยู่กับขอบเขตโครงการและตารางของสถานที่",
+    evaluationPoints: [
+      "ส่ง layout หรือสรุป requirement เบื้องต้นให้ทีม Thailand",
+      "พูดคุยเป้าหมาย capacity, throughput, timeline และระบบที่สนใจ",
+      "ทีมงานตรวจความเหมาะสมและประสานวันนัดหมายล่วงหน้า",
+      "สรุปคำถามทางเทคนิคและขั้นตอนประเมินโครงการหลังการเยี่ยมชม",
+    ],
     faq: [
       {
         question: "ลูกค้าสามารถนัดเยี่ยมชมโรงงานได้ไหม?",
@@ -336,9 +402,39 @@ export const seoPages: SeoPageConfig[] = [
 
 export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
   const pageUrl = `${siteUrl}/${page.slug}`;
+  const currentPageIndex = seoPages.findIndex((item) => item.slug === page.slug);
+  const relatedPages = [1, 2, 3].map(
+    (offset) => seoPages[(currentPageIndex + offset) % seoPages.length],
+  );
   const jsonLd = {
     "@context": "https://schema.org",
     "@graph": [
+      {
+        "@type": "WebPage",
+        "@id": `${pageUrl}#webpage`,
+        url: pageUrl,
+        name: page.metaTitle,
+        description: page.description,
+        inLanguage: "th-TH",
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          {
+            "@type": "ListItem",
+            position: 1,
+            name: "INFORM-UMH Thailand",
+            item: siteUrl,
+          },
+          {
+            "@type": "ListItem",
+            position: 2,
+            name: page.metaTitle,
+            item: pageUrl,
+          },
+        ],
+      },
       {
         "@type": "Service",
         "@id": `${pageUrl}#service`,
@@ -384,10 +480,13 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
         <div className="absolute inset-0 bg-gradient-to-r from-white via-white/90 to-white/40" />
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.08fr_420px] lg:items-center">
           <div>
-            <Link href="/" className="inline-flex items-center gap-2 text-sm font-semibold text-red-700">
-              <ArrowRight className="h-4 w-4 rotate-180" />
-              กลับหน้า INFORM-UMH Thailand
-            </Link>
+            <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-zinc-600">
+              <Link href="/" className="font-semibold text-red-700 hover:text-red-600">
+                INFORM-UMH Thailand
+              </Link>
+              <span aria-hidden="true">/</span>
+              <span>{page.eyebrow}</span>
+            </nav>
             <div className="mt-8 inline-flex rounded-full border border-red-200 bg-red-50 px-4 py-1.5 text-xs font-bold uppercase tracking-wider text-red-700">
               {page.eyebrow}
             </div>
@@ -463,6 +562,24 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
         </div>
       </section>
 
+      <section className="border-y border-zinc-200 bg-zinc-50 px-4 py-16 sm:px-6 lg:px-8">
+        <div className="mx-auto grid max-w-7xl gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
+          <div>
+            <p className="text-xs font-bold uppercase tracking-widest text-red-600">Project Evaluation</p>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight">{page.evaluationTitle}</h2>
+            <p className="mt-5 text-base leading-relaxed text-zinc-700">{page.evaluationLead}</p>
+          </div>
+          <ol className="grid gap-x-8 gap-y-6 sm:grid-cols-2">
+            {page.evaluationPoints.map((item, index) => (
+              <li key={item} className="border-l-2 border-red-500 pl-4">
+                <p className="text-xs font-bold text-red-600">0{index + 1}</p>
+                <p className="mt-2 text-sm leading-relaxed text-zinc-700">{item}</p>
+              </li>
+            ))}
+          </ol>
+        </div>
+      </section>
+
       <section className="border-t border-zinc-200 bg-zinc-50 px-4 py-16 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-5xl">
           <h2 className="text-center text-3xl font-bold tracking-tight">คำถามที่พบบ่อย</h2>
@@ -482,6 +599,37 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
               <Send className="h-4 w-4" />
               ส่ง Layout / Requirement ให้ทีม Thailand ประเมิน
             </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="border-t border-zinc-200 bg-white px-4 py-14 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div>
+              <p className="text-xs font-bold uppercase tracking-widest text-red-600">Related Solutions</p>
+              <h2 className="mt-2 text-2xl font-bold">ดูระบบที่เกี่ยวข้องกับโปรเจกต์</h2>
+            </div>
+            <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-red-700">
+              ดูโซลูชันทั้งหมด
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+          <div className="mt-8 grid border-t border-zinc-200 md:grid-cols-3">
+            {relatedPages.map((related) => (
+              <Link
+                key={related.slug}
+                href={`/${related.slug}`}
+                className="group border-b border-zinc-200 py-6 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0"
+              >
+                <p className="text-xs font-bold uppercase tracking-wider text-red-600">{related.eyebrow}</p>
+                <h3 className="mt-2 text-lg font-bold leading-snug group-hover:text-red-700">{related.title}</h3>
+                <span className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-zinc-600">
+                  อ่านรายละเอียด
+                  <ArrowRight className="h-4 w-4 transition group-hover:translate-x-1" />
+                </span>
+              </Link>
+            ))}
           </div>
         </div>
       </section>
