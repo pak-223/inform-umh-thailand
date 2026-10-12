@@ -597,6 +597,27 @@ const seoRouteLinks = [
   },
 ];
 
+const knowledgeLinks = [
+  {
+    href: "/knowledge/asrs-price-thailand",
+    label: "AS/RS Project Guide",
+    title: "ระบบ AS/RS ราคาเท่าไร?",
+    desc: "ดูปัจจัยกำหนดงบและข้อมูลที่ต้องเตรียมก่อนขอประเมินโครงการ",
+  },
+  {
+    href: "/knowledge/shuttle-vs-stacker-crane",
+    label: "System Selection Guide",
+    title: "Shuttle Rack หรือ Stacker Crane",
+    desc: "เปรียบเทียบจาก SKU, throughput, ความสูง และรูปแบบการจัดเก็บ",
+  },
+  {
+    href: "/knowledge/warehouse-automation-checklist",
+    label: "Automation Readiness",
+    title: "Checklist ก่อนลงทุน Automation",
+    desc: "รายการที่ฝ่ายจัดซื้อ วิศวกร และผู้บริหารควรตรวจให้ครบก่อนเริ่มโครงการ",
+  },
+];
+
 const projectTypes = [
   "สร้างคลังสินค้าใหม่ (New Warehouse)",
   "ขยายพื้นที่จัดเก็บเดิม (Expansion)",
@@ -1280,6 +1301,50 @@ export default function Home() {
                   <p className="mt-2 text-xs leading-relaxed text-zinc-600">{route.desc}</p>
                   <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-red-600">
                     อ่านรายละเอียด
+                    <ArrowRight className="h-3.5 w-3.5" />
+                  </span>
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16 border-y border-zinc-200 py-12">
+            <div className="flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
+              <div className="max-w-3xl">
+                <span className="text-xs font-bold uppercase tracking-widest text-red-600">
+                  Knowledge Center
+                </span>
+                <h3 className="mt-3 text-2xl font-bold text-zinc-950 sm:text-3xl">
+                  เตรียมข้อมูลให้พร้อม ก่อนเลือกระบบและของบลงทุน
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-zinc-600">
+                  คู่มือสำหรับทีมจัดซื้อ วิศวกร และผู้บริหารที่กำลังศึกษาโครงการระบบคลังสินค้าในประเทศไทย
+                </p>
+              </div>
+              <a
+                href="/knowledge"
+                className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700"
+              >
+                ดูบทความทั้งหมด
+                <ArrowRight className="h-4 w-4" />
+              </a>
+            </div>
+            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+              {knowledgeLinks.map((article) => (
+                <a
+                  key={article.href}
+                  href={article.href}
+                  className="group border-t-2 border-zinc-900 pt-5 transition hover:border-red-600"
+                >
+                  <span className="text-[11px] font-bold uppercase tracking-widest text-red-600">
+                    {article.label}
+                  </span>
+                  <h4 className="mt-3 text-lg font-bold leading-7 text-zinc-950 group-hover:text-red-700">
+                    {article.title}
+                  </h4>
+                  <p className="mt-2 text-sm leading-6 text-zinc-600">{article.desc}</p>
+                  <span className="mt-4 inline-flex items-center gap-2 text-xs font-bold text-zinc-900 group-hover:text-red-600">
+                    อ่านคู่มือ
                     <ArrowRight className="h-3.5 w-3.5" />
                   </span>
                 </a>

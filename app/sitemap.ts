@@ -12,6 +12,12 @@ const seoRoutes = [
   "warehouse-storage-capacity-optimization-thailand",
   "factory-visit-warehouse-automation-thailand",
 ];
+const knowledgeRoutes = [
+  "knowledge",
+  "knowledge/asrs-price-thailand",
+  "knowledge/shuttle-vs-stacker-crane",
+  "knowledge/warehouse-automation-checklist",
+];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -26,6 +32,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: contentLastModified,
       changeFrequency: "weekly" as const,
       priority: 0.8,
+    })),
+    ...knowledgeRoutes.map((route) => ({
+      url: `${siteUrl}/${route}`,
+      lastModified: contentLastModified,
+      changeFrequency: "monthly" as const,
+      priority: route === "knowledge" ? 0.8 : 0.75,
     })),
   ];
 }
