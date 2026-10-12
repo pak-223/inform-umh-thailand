@@ -481,7 +481,7 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
         <div className="relative mx-auto grid max-w-7xl gap-10 lg:grid-cols-[1.08fr_420px] lg:items-center">
           <div>
             <nav aria-label="Breadcrumb" className="flex flex-wrap items-center gap-2 text-sm text-zinc-600">
-              <Link href="/" className="font-semibold text-red-700 hover:text-red-600">
+              <Link href="/" prefetch={false} className="font-semibold text-red-700 hover:text-red-600">
                 INFORM-UMH Thailand
               </Link>
               <span aria-hidden="true">/</span>
@@ -610,7 +610,7 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
               <p className="text-xs font-bold uppercase tracking-widest text-red-600">Related Solutions</p>
               <h2 className="mt-2 text-2xl font-bold">ดูระบบที่เกี่ยวข้องกับโปรเจกต์</h2>
             </div>
-            <Link href="/" className="inline-flex items-center gap-2 text-sm font-bold text-red-700">
+            <Link href="/" prefetch={false} className="inline-flex items-center gap-2 text-sm font-bold text-red-700">
               ดูโซลูชันทั้งหมด
               <ArrowRight className="h-4 w-4" />
             </Link>
@@ -620,6 +620,7 @@ export function SeoLandingPage({ page }: { page: SeoPageConfig }) {
               <Link
                 key={related.slug}
                 href={`/${related.slug}`}
+                prefetch={false}
                 className="group border-b border-zinc-200 py-6 md:border-r md:px-6 md:first:pl-0 md:last:border-r-0"
               >
                 <p className="text-xs font-bold uppercase tracking-wider text-red-600">{related.eyebrow}</p>
