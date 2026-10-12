@@ -20,12 +20,13 @@ import {
   Workflow,
   X,
 } from "lucide-react";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 
 const contactEmail = "pakawat.th@informrack.com";
 const thailandCompany = "INFORM-UMH (THAILAND) CO., LTD.";
 const thailandLogo = "/assets/parent-site/inform-logo.png";
-const externalLeadFormUrl = "";
+const externalLeadFormUrl =
+  "https://wax-manatee-8b1.notion.site/3cbba0055ed04ab2b33d41c3342f0b59?pvs=105";
 const thailandContact = {
   name: "Mr. Pakawat Sonprates",
   position: "Sales & Project Lead (Thailand)",
@@ -57,7 +58,7 @@ const copy = {
     formLead:
       "ทีมงานวิศวกรและฝ่ายขายในประเทศไทยพร้อมประเมินพื้นที่ Layout และช่วยวางแนวทางระบบที่เหมาะสมกับธุรกิจของคุณ",
     submit: "ส่งข้อมูลประเมินโปรเจกต์",
-    note: "เมื่อกดส่ง ระบบจะเปิดอีเมลพร้อมสรุปข้อมูลโครงการเพื่อให้คุณส่งตรงถึงทีมงาน Sales Thailand ได้ทันที",
+    note: "ข้อมูลจะถูกส่งตรงเข้าสู่ระบบรับโปรเจกต์ของทีม Sales Thailand เพื่อให้ทีมงานติดต่อกลับ",
     fields: {
       contactName: "ชื่อผู้ติดต่อ *",
       company: "ชื่อบริษัท / องค์กร *",
@@ -127,7 +128,7 @@ const copy = {
     formLead:
       "Share your project scope or layout drawing. Our Thailand engineering & sales team will evaluate your requirements and contact you with targeted recommendations.",
     submit: "Submit Project Inquiry",
-    note: "Submitting generates an email summary directly formatted for immediate intake by our Thailand Sales & Engineering team.",
+    note: "Your information is sent directly to the Thailand Sales project intake system for follow-up.",
     fields: {
       contactName: "Contact Name *",
       company: "Company Name *",
@@ -197,7 +198,7 @@ const copy = {
     formLead:
       "提交您的仓库平面图或项目需求，泰国本地销售与工程团队将为您提供针对性的系统方案建议。",
     submit: "提交项目评估申请",
-    note: "提交后将自动生成项目需求邮件，方便直接与泰国本地团队取得联系。",
+    note: "您的信息将直接提交至泰国销售团队的项目登记系统，以便后续联系。",
     fields: {
       contactName: "联系人姓名 *",
       company: "公司名称 *",
@@ -618,24 +619,6 @@ const knowledgeLinks = [
   },
 ];
 
-const projectTypes = [
-  "สร้างคลังสินค้าใหม่ (New Warehouse)",
-  "ขยายพื้นที่จัดเก็บเดิม (Expansion)",
-  "เพิ่มความจุ Pallet (Increase Storage Capacity)",
-  "อัปเกรดระบบอัตโนมัติ (Automation Upgrade)",
-  "เปลี่ยนระบบชั้นวางเดิม (Replacement)",
-  "อื่นๆ / ขอรับคำปรึกษา (Consultation)",
-];
-
-const systems = [
-  "High Precision Racking",
-  "Radio Shuttle System",
-  "Four-way Shuttle AS/RS",
-  "Stacker Crane AS/RS",
-  "Conveyor / AGV / RGV",
-  "WMS / WCS Software",
-];
-
 type Lang = keyof typeof copy;
 
 const siteUrl = "https://inform-umh-thailand.sonpra0112.workers.dev";
@@ -745,65 +728,6 @@ export default function Home() {
   const [qrModal, setQrModal] = useState<"line" | "wechat" | null>(null);
 
   const t = copy[lang];
-
-  function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault();
-    const data = new FormData(event.currentTarget);
-    const selectedSystems = systems.filter((system) => data.get(system));
-    const params = new URLSearchParams({
-      contactName: String(data.get("contactName") || ""),
-      company: String(data.get("company") || ""),
-      phone: String(data.get("phone") || ""),
-      email: String(data.get("email") || ""),
-      location: String(data.get("location") || ""),
-      projectType: String(data.get("projectType") || ""),
-      requirement: String(data.get("signal") || ""),
-      systems: selectedSystems.join(", "),
-      assignedSales: thailandContact.name,
-    });
-
-    if (externalLeadFormUrl) {
-      const separator = externalLeadFormUrl.includes("?") ? "&" : "?";
-      window.location.href = `${externalLeadFormUrl}${separator}${params.toString()}`;
-      return;
-    }
-
-    const body = [
-      "========================================",
-      "INFORM THAILAND PROJECT INTAKE FORM",
-      "========================================",
-      thailandCompany,
-      "",
-      `Contact Name: ${data.get("contactName") || ""}`,
-      `Company: ${data.get("company") || ""}`,
-      `Phone: ${data.get("phone") || ""}`,
-      `Email: ${data.get("email") || ""}`,
-      `Project Location / Province: ${data.get("location") || ""}`,
-      `Project Type: ${data.get("projectType") || ""}`,
-      "",
-      "--- PROJECT REQUIREMENTS ---",
-      `Project Scope / Details: ${data.get("signal") || ""}`,
-      `Warehouse Size / Height: ${data.get("warehouseSize") || ""}`,
-      `Product Type / Pallet Spec: ${data.get("productType") || ""}`,
-      `Target Pallet Capacity: ${data.get("capacity") || ""}`,
-      `Timeline: ${data.get("timeline") || ""}`,
-      `Estimated Budget: ${data.get("budget") || ""}`,
-      `Interested Systems: ${selectedSystems.join(", ") || "N/A"}`,
-      "",
-      "--- THAILAND SALES ASSIGNED ---",
-      `Sales & Project Lead: ${thailandContact.name}`,
-      `Title: ${thailandContact.position}`,
-      `Email: ${contactEmail}`,
-      `Direct Call: ${thailandContact.phoneDisplay}`,
-      `Line / WeChat ID: ${thailandContact.lineWechat}`,
-      "",
-      "Note: Please attach layout drawings (DWG/PDF) or site photos to this email if available.",
-    ].join("\n");
-
-    window.location.href = `mailto:${contactEmail}?subject=${encodeURIComponent(
-      `[Project Intake] ${data.get("company") || "Warehouse Requirement"} - INFORM-UMH Thailand`,
-    )}&body=${encodeURIComponent(body)}`;
-  }
 
   return (
     <main className="min-h-screen bg-white text-zinc-950 antialiased selection:bg-red-600 selection:text-white">
@@ -1602,79 +1526,48 @@ export default function Home() {
             </div>
           </div>
 
-          <form
-            onSubmit={handleSubmit}
-            className="rounded-2xl border border-zinc-200 bg-white p-6 sm:p-8 backdrop-blur-xl space-y-6 shadow-2xl"
-          >
-            <div className="grid gap-4 sm:grid-cols-2">
-              <Field label={t.fields.contactName} name="contactName" required />
-              <Field label={t.fields.company} name="company" required />
-              <Field label={t.fields.phone} name="phone" type="tel" />
-              <Field label={t.fields.email} name="email" type="email" />
-              <Field label={t.fields.location} name="location" required />
+          <div className="flex min-h-[520px] flex-col justify-between rounded-lg border border-zinc-200 bg-zinc-50 p-6 shadow-2xl sm:p-10">
+            <div>
+              <div className="mb-7 flex h-12 w-12 items-center justify-center rounded-lg bg-red-600 text-white">
+                <Send className="h-6 w-6" />
+              </div>
+              <h3 className="text-2xl font-bold text-zinc-950">{t.formTitle}</h3>
+              <p className="mt-3 max-w-2xl text-sm leading-relaxed text-zinc-700">
+                {t.formLead}
+              </p>
 
-              <label className="grid gap-2 text-xs font-semibold text-zinc-700">
-                {t.fields.projectType}
-                <select
-                  name="projectType"
-                  required
-                  className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-xs text-zinc-950 focus:border-red-500 focus:outline-none"
-                >
-                  {projectTypes.map((item) => (
-                    <option key={item} value={item} className="bg-white">
-                      {item}
-                    </option>
-                  ))}
-                </select>
-              </label>
-
-              <label className="grid gap-2 text-xs font-semibold text-zinc-700 sm:col-span-2">
-                {t.fields.signal}
-                <textarea
-                  name="signal"
-                  required
-                  rows={4}
-                  placeholder="ระบุข้อมูลเพิ่มเติม เช่น ขนาดคลังสินค้า, ชนิด Pallet หรือสิ่งที่ต้องการประเมิน..."
-                  className="rounded-xl border border-zinc-200 bg-white p-3 text-xs text-zinc-950 focus:border-red-500 focus:outline-none"
-                />
-              </label>
-
-              <Field label={t.fields.warehouseSize} name="warehouseSize" />
-              <Field label={t.fields.productType} name="productType" />
-              <Field label={t.fields.capacity} name="capacity" />
-              <Field label={t.fields.timeline} name="timeline" />
-              <Field label={t.fields.budget} name="budget" />
-
-              <div className="sm:col-span-2">
-                <p className="text-xs font-semibold text-zinc-700 mb-3">{t.fields.system}</p>
-                <div className="grid gap-2 sm:grid-cols-3">
-                  {systems.map((system) => (
-                    <label
-                      key={system}
-                      className="flex items-center gap-2 rounded-xl border border-zinc-200 bg-zinc-50 p-3 text-xs text-zinc-700 hover:border-red-500/40 cursor-pointer"
-                    >
-                      <input
-                        name={system}
-                        type="checkbox"
-                        className="h-4 w-4 rounded accent-red-600"
-                      />
-                      {system}
-                    </label>
-                  ))}
-                </div>
+              <div className="mt-8 grid gap-x-8 gap-y-4 sm:grid-cols-2">
+                {[
+                  t.fields.contactName,
+                  t.fields.company,
+                  t.fields.phone,
+                  t.fields.location,
+                  t.fields.projectType,
+                  t.fields.signal,
+                  t.fields.system,
+                  "Layout / Drawing upload",
+                ].map((field) => (
+                  <div key={field} className="flex items-start gap-3 text-sm text-zinc-700">
+                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-red-600" />
+                    <span>{field.replace(" *", "")}</span>
+                  </div>
+                ))}
               </div>
             </div>
 
-            <p className="text-[11px] text-zinc-600">{t.note}</p>
-
-            <button
-              type="submit"
-              className="inline-flex w-full items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-red-200/80 transition hover:bg-red-500 active:scale-95"
-            >
-              <Mail className="h-4 w-4" />
-              {t.submit}
-            </button>
-          </form>
+            <div className="mt-10 border-t border-zinc-200 pt-6">
+              <p className="mb-4 text-xs leading-relaxed text-zinc-600">{t.note}</p>
+              <a
+                href={externalLeadFormUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex w-full items-center justify-center gap-2 rounded-lg bg-red-600 px-6 py-4 text-sm font-bold text-white shadow-xl shadow-red-200/80 transition hover:bg-red-500 active:scale-[0.99]"
+              >
+                <ExternalLink className="h-4 w-4" />
+                {t.submit}
+              </a>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -1764,26 +1657,3 @@ export default function Home() {
   );
 }
 
-function Field({
-  label,
-  name,
-  type = "text",
-  required = false,
-}: {
-  label: string;
-  name: string;
-  type?: string;
-  required?: boolean;
-}) {
-  return (
-    <label className="grid gap-2 text-xs font-semibold text-zinc-700">
-      {label}
-      <input
-        name={name}
-        type={type}
-        required={required}
-        className="h-11 rounded-xl border border-zinc-200 bg-white px-3 text-xs text-zinc-950 focus:border-red-500 focus:outline-none"
-      />
-    </label>
-  );
-}
