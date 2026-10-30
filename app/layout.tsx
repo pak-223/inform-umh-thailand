@@ -15,11 +15,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://inform-umh-thailand.sonpra0112.workers.dev'),
   title: {
-    default: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
+    default: 'ระบบคลังสินค้าอัตโนมัติ AS/RS และชั้นวางสินค้า | INFORM-UMH Thailand',
     template: '%s | INFORM-UMH Thailand',
   },
   description:
-    'Contact INFORM-UMH Thailand for warehouse racking, AS/RS, shuttle systems, stacker cranes, AGV, WMS/WCS, and automated warehouse project consultation.',
+    'รับออกแบบระบบ AS/RS, Shuttle, Stacker Crane, WMS/WCS และชั้นวางสินค้า สำหรับโรงงานในไทย ชลบุรี ระยอง และ EEC ส่ง Layout ให้ทีม Thailand ประเมินโครงการ',
   keywords: [
     'warehouse racking Thailand',
     'ASRS Thailand',
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
+    title: 'ระบบคลังสินค้าอัตโนมัติ AS/RS และชั้นวางสินค้า | INFORM-UMH Thailand',
     description:
-      'Send layout or requirement to the INFORM-UMH Thailand team for warehouse racking and automation project review.',
+      'ส่ง Layout หรือ Requirement ให้ทีม INFORM-UMH Thailand ประเมินระบบ Racking, AS/RS, Shuttle, Stacker Crane และ WMS/WCS',
     url: '/',
     siteName: 'INFORM-UMH Thailand',
     images: ['/assets/parent-site/full-system-overview.png'],
@@ -62,9 +62,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'INFORM-UMH Thailand | Warehouse Racking, AS/RS & Automation Solutions',
+    title: 'ระบบคลังสินค้าอัตโนมัติ AS/RS และชั้นวางสินค้า | INFORM-UMH Thailand',
     description:
-      'Warehouse racking, shuttle systems, stacker cranes, AGV, WMS/WCS, and automation project consultation in Thailand.',
+      'โซลูชัน Racking, AS/RS, Shuttle, Stacker Crane, AGV และ WMS/WCS พร้อมทีมงานดูแลโครงการในประเทศไทย',
     images: ['/assets/parent-site/full-system-overview.png'],
   },
 };

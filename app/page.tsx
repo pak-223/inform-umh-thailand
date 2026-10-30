@@ -10,6 +10,7 @@ import {
   Factory,
   Mail,
   MessageSquare,
+  MapPin,
   Phone,
   QrCode,
   Send,
@@ -27,6 +28,16 @@ const thailandCompany = "INFORM-UMH (THAILAND) CO., LTD.";
 const thailandLogo = "/assets/parent-site/inform-logo.png";
 const externalLeadFormUrl =
   "https://wax-manatee-8b1.notion.site/3cbba0055ed04ab2b33d41c3342f0b59?pvs=105";
+const googleBusinessProfileUrl = "https://maps.app.goo.gl/5Fn1jorxfdRy82q17";
+const thailandOffice = {
+  category: "Manufacturer",
+  address: "890 88 Khao Khansong, Si Racha, Chonburi 20110, Thailand",
+  addressTh: "890 88 ตำบลเขาคันทรง อำเภอศรีราชา ชลบุรี 20110",
+  phoneDisplay: "062 264 1818",
+  phoneHref: "tel:+66622641818",
+  latitude: 13.1325412,
+  longitude: 101.1532136,
+};
 const thailandContact = {
   name: "Mr. Pakawat Sonprates",
   position: "Sales & Project Lead (Thailand)",
@@ -632,7 +643,7 @@ const organizationJsonLd = {
       url: siteUrl,
       logo: `${siteUrl}${thailandLogo}`,
       email: contactEmail,
-      telephone: thailandContact.phoneDisplay,
+      telephone: thailandOffice.phoneDisplay,
       areaServed: ["Thailand", "Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC"],
       parentOrganization: {
         "@type": "Organization",
@@ -640,6 +651,7 @@ const organizationJsonLd = {
         url: "https://en.informrack.com/",
       },
       sameAs: [
+        googleBusinessProfileUrl,
         "https://en.informrack.com/",
         "https://en.informrack.com/about.aspx?nid=1&typeid=187",
       ],
@@ -650,12 +662,22 @@ const organizationJsonLd = {
       name: thailandCompany,
       url: siteUrl,
       email: contactEmail,
-      telephone: thailandContact.phoneDisplay,
+      telephone: thailandOffice.phoneDisplay,
       areaServed: ["Thailand", "Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC"],
       address: {
         "@type": "PostalAddress",
+        streetAddress: "890 88",
+        addressLocality: "Khao Khansong, Si Racha",
+        addressRegion: "Chonburi",
+        postalCode: "20110",
         addressCountry: "TH",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: thailandOffice.latitude,
+        longitude: thailandOffice.longitude,
+      },
+      hasMap: googleBusinessProfileUrl,
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "sales",
@@ -1505,6 +1527,28 @@ export default function Home() {
                 </a>
               </div>
 
+              <div className="border-t border-zinc-200 pt-4">
+                <p className="text-[11px] font-bold uppercase tracking-wider text-zinc-500">
+                  INFORM-UMH Thailand Office
+                </p>
+                <a
+                  href={googleBusinessProfileUrl}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="mt-2 flex items-start gap-2 text-xs leading-relaxed text-zinc-700 hover:text-red-600"
+                >
+                  <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-red-600" />
+                  <span>{lang === "th" ? thailandOffice.addressTh : thailandOffice.address}</span>
+                </a>
+                <a
+                  href={thailandOffice.phoneHref}
+                  className="mt-2 flex items-center gap-2 text-xs text-zinc-700 hover:text-red-600"
+                >
+                  <Phone className="h-4 w-4 text-red-600" />
+                  Company: {thailandOffice.phoneDisplay}
+                </a>
+              </div>
+
               <div className="pt-3 flex gap-2">
                 <button
                   type="button"
@@ -1579,8 +1623,25 @@ export default function Home() {
             <p className="mt-1">
               Sales & Project Support: {thailandContact.name} ({thailandContact.phoneDisplay})
             </p>
+            <a
+              href={googleBusinessProfileUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-2 inline-flex items-start gap-2 leading-relaxed hover:text-red-600"
+            >
+              <MapPin className="mt-0.5 h-3.5 w-3.5 shrink-0 text-red-600" />
+              {lang === "th" ? thailandOffice.addressTh : thailandOffice.address}
+            </a>
           </div>
           <div className="flex gap-6">
+            <a
+              href={googleBusinessProfileUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="hover:text-red-600"
+            >
+              Google Maps
+            </a>
             <a href={`mailto:${contactEmail}`} className="hover:text-zinc-950">
               {contactEmail}
             </a>

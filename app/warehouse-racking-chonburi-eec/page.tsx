@@ -6,6 +6,14 @@ import { ArrowRight, CheckCircle2, Mail, MapPin, Phone, Send, Warehouse } from "
 const siteUrl = "https://inform-umh-thailand.sonpra0112.workers.dev";
 const contactEmail = "pakawat.th@informrack.com";
 const thailandCompany = "INFORM-UMH (THAILAND) CO., LTD.";
+const googleBusinessProfileUrl = "https://maps.app.goo.gl/5Fn1jorxfdRy82q17";
+const thailandOffice = {
+  addressTh: "890 88 ตำบลเขาคันทรง อำเภอศรีราชา ชลบุรี 20110",
+  phoneDisplay: "062 264 1818",
+  phoneHref: "tel:+66622641818",
+  latitude: 13.1325412,
+  longitude: 101.1532136,
+};
 const thailandContact = {
   name: "Mr. Pakawat Sonprates",
   position: "Sales & Project Lead (Thailand)",
@@ -44,7 +52,28 @@ const localJsonLd = {
         name: thailandCompany,
         url: siteUrl,
         email: contactEmail,
-        telephone: thailandContact.phoneDisplay,
+        telephone: thailandOffice.phoneDisplay,
+        address: {
+          "@type": "PostalAddress",
+          streetAddress: "890 88",
+          addressLocality: "Khao Khansong, Si Racha",
+          addressRegion: "Chonburi",
+          postalCode: "20110",
+          addressCountry: "TH",
+        },
+        geo: {
+          "@type": "GeoCoordinates",
+          latitude: thailandOffice.latitude,
+          longitude: thailandOffice.longitude,
+        },
+        hasMap: googleBusinessProfileUrl,
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "sales",
+          name: thailandContact.name,
+          email: contactEmail,
+          telephone: thailandContact.phoneDisplay,
+        },
       },
       areaServed: ["Chonburi", "Rayong", "Chachoengsao", "Prachinburi", "Eastern Seaboard", "EEC", "Thailand"],
       audience: {
@@ -153,6 +182,15 @@ export default function ChonburiEecPage() {
                 <Phone className="h-4 w-4 text-red-600" />
                 โทร {thailandContact.phoneDisplay}
               </a>
+              <a
+                href={googleBusinessProfileUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-2 rounded-xl border border-zinc-300 bg-white/85 px-6 py-4 text-sm font-bold text-zinc-950 transition hover:border-red-300 hover:text-red-700"
+              >
+                <MapPin className="h-4 w-4 text-red-600" />
+                ดูที่ตั้งบริษัท
+              </a>
             </div>
           </div>
 
@@ -179,6 +217,22 @@ export default function ChonburiEecPage() {
               <div className="rounded-xl bg-zinc-50 p-3 font-semibold text-zinc-900">
                 Line / WeChat: <span className="text-red-700">{thailandContact.lineWechat}</span>
               </div>
+              <a
+                href={googleBusinessProfileUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-start gap-3 rounded-xl bg-zinc-50 p-3 font-semibold text-zinc-900 transition hover:text-red-700"
+              >
+                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-red-600" />
+                <span>{thailandOffice.addressTh}</span>
+              </a>
+              <a
+                href={thailandOffice.phoneHref}
+                className="flex items-center gap-3 rounded-xl bg-zinc-50 p-3 font-semibold text-zinc-900 transition hover:text-red-700"
+              >
+                <Phone className="h-4 w-4 text-red-600" />
+                เบอร์บริษัท {thailandOffice.phoneDisplay}
+              </a>
             </div>
           </aside>
         </div>
