@@ -12,6 +12,7 @@ import {
   MessageSquare,
   MapPin,
   Phone,
+  PlayCircle,
   QrCode,
   Send,
   Settings2,
@@ -29,6 +30,7 @@ const thailandLogo = "/assets/parent-site/inform-logo.png";
 const externalLeadFormUrl =
   "https://wax-manatee-8b1.notion.site/3cbba0055ed04ab2b33d41c3342f0b59?pvs=105";
 const googleBusinessProfileUrl = "https://maps.app.goo.gl/5Fn1jorxfdRy82q17";
+const parentYoutubeChannelUrl = "https://www.youtube.com/channel/UCCASa2O0s7LNVhjyM7QGvfw/videos";
 const thailandOffice = {
   category: "Manufacturer",
   address: "890 88 Khao Khansong, Si Racha, Chonburi 20110, Thailand",
@@ -92,6 +94,11 @@ const copy = {
     visualsLead:
       "เห็นภาพการเชื่อมต่อของ Racking, Shuttle, AS/RS, AGV, Conveyor และ Monitoring เพื่อวางแผนระบบคลังสินค้าที่เหมาะกับพื้นที่ การไหลของสินค้า และเป้าหมายการขยายธุรกิจของคุณ",
     visualSource: "ภาพสินค้าและโซลูชันจาก Inform Storage Group",
+    videosEyebrow: "วิดีโอจากบริษัทแม่",
+    videosTitle: "ดูระบบคลังสินค้าอัตโนมัติทำงานจริง",
+    videosLead:
+      "ทำความเข้าใจภาพรวมระบบ Racking, AS/RS, Stacker Crane และ Shuttle ผ่านวิดีโอที่เผยแพร่โดย Inform Storage Group ก่อนส่ง Layout ให้ทีม Thailand ประเมินแนวทางโครงการ",
+    videosSourceCta: "ดูวิดีโอทั้งหมดจากช่องทางการ",
     parentSystemsTitle: "เลือกโซลูชันให้เหมาะกับรูปแบบคลังสินค้าของคุณ",
     parentSystemsLead:
       "Inform มีระบบให้เลือกตั้งแต่โซลูชันกึ่งอัตโนมัติสำหรับเพิ่มความจุ ไปจนถึงระบบคลังสินค้าอัตโนมัติเต็มรูปแบบสำหรับงานที่ต้องการ throughput และความแม่นยำสูง",
@@ -167,6 +174,11 @@ const copy = {
     visualsLead:
       "See how racking, shuttle systems, AS/RS, AGV, conveyors, and monitoring can work together to support your warehouse layout, product flow, and future expansion plan.",
     visualSource: "Product and solution visuals from Inform Storage Group",
+    videosEyebrow: "Official Parent Company Videos",
+    videosTitle: "See warehouse automation systems in action",
+    videosLead:
+      "Explore racking, AS/RS, stacker crane, and shuttle solutions through videos published by Inform Storage Group, then share your layout with the Thailand team for a project review.",
+    videosSourceCta: "View all official videos",
     parentSystemsTitle: "Select the right solution for your warehouse operation",
     parentSystemsLead:
       "Inform offers a practical range of systems, from semi-automated storage upgrades to fully automated warehouse solutions for higher-throughput operations.",
@@ -242,6 +254,11 @@ const copy = {
     visualsLead:
       "展示货架、穿梭车、AS/RS、AGV、输送线及监控系统如何协同运作，帮助规划适合仓库布局、货物流转和未来扩展的系统方案。",
     visualSource: "图片来自 Inform Storage Group 产品与解决方案资料",
+    videosEyebrow: "母公司官方视频",
+    videosTitle: "观看智能仓储系统实际运行",
+    videosLead:
+      "通过 Inform Storage Group 官方视频了解货架、AS/RS、堆垛机与穿梭车系统，并将仓库平面图提交给泰国团队进行项目评估。",
+    videosSourceCta: "查看全部官方视频",
     parentSystemsTitle: "为您的仓储运营选择合适的系统方案",
     parentSystemsLead:
       "Inform 提供从半自动化存储升级到全自动化立体仓库的多种系统选择，适用于高效率、高吞吐量的仓储运营场景。",
@@ -424,6 +441,33 @@ const visualHighlights = [
     title: "Warehouse Software & Monitoring",
     subtitle: "WMS / WCS และหน้าจอติดตามสถานะคลังสินค้า",
     image: "/assets/parent-site/wms.jpg",
+  },
+];
+
+const parentVideos = [
+  {
+    id: "3jsFQB5yQ0M",
+    title: {
+      th: "ภาพรวม Inform Storage และโซลูชันคลังสินค้าอัจฉริยะ",
+      en: "Inform Storage intelligent warehouse solutions overview",
+      zh: "Inform Storage 智能仓储解决方案概览",
+    },
+  },
+  {
+    id: "K9zabNpij0Y",
+    title: {
+      th: "ตัวอย่าง AS/RS Stacker Warehouse สำหรับอุตสาหกรรมยานยนต์",
+      en: "AS/RS stacker warehouse for the automotive industry",
+      zh: "汽车行业 AS/RS 堆垛机立体仓库案例",
+    },
+  },
+  {
+    id: "gI_u8K-kWUw",
+    title: {
+      th: "ตัวอย่างระบบ Pallet Two-Way Shuttle + Stacker Crane",
+      en: "Pallet two-way shuttle and stacker crane case",
+      zh: "托盘双向穿梭车与堆垛机系统案例",
+    },
   },
 ];
 
@@ -1056,6 +1100,70 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* OFFICIAL PARENT COMPANY VIDEOS */}
+      <section id="videos" className="border-t border-zinc-200 bg-white py-20">
+        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-red-600">
+              <PlayCircle className="h-4 w-4" />
+              {t.videosEyebrow}
+            </span>
+            <h2 className="mt-3 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl">
+              {t.videosTitle}
+            </h2>
+            <p className="mt-4 text-sm leading-relaxed text-zinc-700">{t.videosLead}</p>
+          </div>
+
+          <div className="mt-10 grid gap-5 lg:grid-cols-3">
+            {parentVideos.map((video) => (
+              <article
+                key={video.id}
+                className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg shadow-zinc-200/60"
+              >
+                <div className="aspect-video bg-zinc-950">
+                  <iframe
+                    className="h-full w-full"
+                    src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0`}
+                    title={video.title[lang]}
+                    loading="lazy"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  />
+                </div>
+                <div className="p-5">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-red-600">
+                    Inform Storage Group
+                  </p>
+                  <h3 className="mt-2 text-base font-bold leading-7 text-zinc-950">
+                    {video.title[lang]}
+                  </h3>
+                </div>
+              </article>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
+            <a
+              href="#lead-form"
+              className="inline-flex items-center justify-center gap-2 rounded-xl bg-red-600 px-6 py-3 text-xs font-bold text-white transition hover:bg-red-500"
+            >
+              <Send className="h-3.5 w-3.5" />
+              {t.primaryCta}
+            </a>
+            <a
+              href={parentYoutubeChannelUrl}
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white px-5 py-3 text-xs font-bold text-zinc-950 transition hover:border-red-300 hover:text-red-700"
+            >
+              {t.videosSourceCta}
+              <ExternalLink className="h-3.5 w-3.5 text-red-600" />
+            </a>
           </div>
         </div>
       </section>
