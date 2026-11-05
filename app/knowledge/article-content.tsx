@@ -30,6 +30,9 @@ export type KnowledgeArticle = {
   imageAlt: string;
   answer: string;
   readingTime: string;
+  datePublished: string;
+  dateModified: string;
+  dateLabel: string;
   sections: ArticleSection[];
   sources: Array<{ label: string; href: string }>;
 };
@@ -47,6 +50,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     answer:
       'ระบบ AS/RS ไม่มีราคามาตรฐานที่ใช้ได้กับทุกคลัง เพราะขอบเขตลงทุนขึ้นอยู่กับจำนวนตำแหน่งจัดเก็บ ความเร็วรับเข้า-จ่ายออก ความสูงอาคาร ประเภทเครื่องจักร และการเชื่อมต่อซอฟต์แวร์ วิธีเริ่มที่แม่นยำที่สุดคือส่ง Layout พร้อมข้อมูล Pallet, Capacity และ Throughput ให้ทีมวิศวกรรมประเมินแนวทางระบบก่อนจัดงบประมาณ',
     readingTime: 'อ่านประมาณ 6 นาที',
+    datePublished: '2026-10-12',
+    dateModified: '2026-10-12',
+    dateLabel: '12 ตุลาคม 2026',
     sections: [
       {
         heading: 'อะไรเป็นตัวกำหนดงบลงทุน AS/RS',
@@ -115,6 +121,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     answer:
       'ไม่มีระบบใดดีกว่าในทุกกรณี Shuttle เหมาะกับการเพิ่มความหนาแน่นและจัดเก็บสินค้าเป็น Lane หรือ Batch ส่วน Stacker Crane เหมาะกับคลัง High-bay ที่ต้องการการจัดเก็บและเบิกจ่ายอัตโนมัติใน Aisle อย่างต่อเนื่อง การเลือกควรอ้างอิง SKU Profile, Pallet ต่อ SKU, Throughput, ความสูง และกฎการหมุนเวียนสินค้า',
     readingTime: 'อ่านประมาณ 7 นาที',
+    datePublished: '2026-10-12',
+    dateModified: '2026-10-12',
+    dateLabel: '12 ตุลาคม 2026',
     sections: [
       {
         heading: 'เมื่อใดควรพิจารณา Shuttle Rack',
@@ -179,6 +188,9 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     answer:
       'ก่อนเลือกเครื่องจักร ควรกำหนดเป้าหมายโครงการและเก็บข้อมูล Operation ให้ครบ โดยเฉพาะ SKU Profile, Capacity, Peak Throughput, Layout, Integration และ Acceptance Criteria ข้อมูลเหล่านี้ช่วยให้ผู้ขายออกแบบระบบบนโจทย์เดียวกันและช่วยให้ทีมจัดซื้อเปรียบเทียบข้อเสนอได้อย่างเป็นธรรม',
     readingTime: 'อ่านประมาณ 8 นาที',
+    datePublished: '2026-10-12',
+    dateModified: '2026-10-12',
+    dateLabel: '12 ตุลาคม 2026',
     sections: [
       {
         heading: '1. กำหนดผลลัพธ์ทางธุรกิจที่ต้องการ',
@@ -244,6 +256,97 @@ export const knowledgeArticles: KnowledgeArticle[] = [
         label:
           'Why Is Hybrid Warehouse Automation Better for Different SKU Profiles?',
         href: 'https://www.inform-international.com/news/why-is-hybrid-warehouse-automation-better-for-different-sku-profiles',
+      },
+      {
+        label: 'Inform International Top Blog',
+        href: 'https://www.inform-international.com/top-blog/',
+      },
+    ],
+  },
+  {
+    slug: 'pallet-rack-vs-shuttle-vs-asrs',
+    title: 'Pallet Rack, Shuttle Rack หรือ AS/RS เลือกระบบไหนให้เหมาะกับคลังสินค้า',
+    metaTitle: 'Pallet Rack vs Shuttle Rack vs AS/RS เลือกระบบคลังสินค้า',
+    description:
+      'เปรียบเทียบ Pallet Rack, Shuttle Rack และ AS/RS จากจำนวน SKU, storage density, throughput, งบลงทุน และความพร้อมของคลัง เพื่อเลือกแนวทางสำหรับโรงงานในไทย',
+    eyebrow: 'Warehouse System Comparison',
+    image: '/assets/parent-site/full-system-overview.webp',
+    imageAlt: 'เปรียบเทียบ Pallet Rack Shuttle Rack และระบบ AS/RS สำหรับคลังสินค้า',
+    answer:
+      'Pallet Rack เหมาะกับคลังที่ต้องการเข้าถึงสินค้าโดยตรงและยังใช้ Forklift เป็นหลัก, Shuttle Rack เหมาะกับการเพิ่มความหนาแน่นเมื่อมีหลาย Pallet ต่อ SKU หรือ Batch และ AS/RS เหมาะกับโครงการที่ต้องการใช้พื้นที่แนวสูง ควบคุมการเคลื่อนย้ายอัตโนมัติ และมีเป้าหมาย Capacity กับ Throughput ชัดเจน การตัดสินใจควรใช้ข้อมูลหน้างาน ไม่ควรเลือกจากชื่อเทคโนโลยีหรือราคาต่ออุปกรณ์เพียงอย่างเดียว',
+    readingTime: 'อ่านประมาณ 8 นาที',
+    datePublished: '2026-11-05',
+    dateModified: '2026-11-05',
+    dateLabel: '5 พฤศจิกายน 2026',
+    sections: [
+      {
+        heading: 'สรุปความต่างของทั้ง 3 ระบบ',
+        bullets: [
+          'Pallet Rack: เข้าถึงแต่ละ Pallet ได้ง่าย ยืดหยุ่นกับ SKU หลากหลาย และใช้ Forklift ในการรับเข้า-จ่ายออก',
+          'Shuttle Rack: ลดจำนวน Aisle และเพิ่มความลึกของ Lane เหมาะกับสินค้าที่จัดกลุ่มเป็น SKU, Lot หรือ Batch ได้',
+          'AS/RS: รวม Rack, Machine และ Software Control เพื่อจัดเก็บและเบิกจ่ายอัตโนมัติตาม Capacity และ Throughput ที่ออกแบบไว้',
+          'Hybrid Solution: แบ่ง Zone ให้แต่ละกลุ่มสินค้าใช้ระบบต่างกันได้ โดยไม่จำเป็นต้องทำทั้งคลังเป็น Automation รูปแบบเดียว',
+        ],
+      },
+      {
+        heading: 'เมื่อใดควรเริ่มจาก Pallet Rack',
+        paragraphs: [
+          'Selective Pallet Rack มักเป็นจุดเริ่มต้นที่เหมาะเมื่อคลังมี SKU หลากหลาย ต้องการเข้าถึง Pallet โดยตรง หรือ Operation ยังเปลี่ยนแปลงบ่อย ระบบสามารถปรับจำนวนระดับจัดเก็บและ Layout ให้สอดคล้องกับ Forklift ที่ใช้อยู่ได้',
+        ],
+        bullets: [
+          'ต้องเข้าถึงทุก Pallet โดยตรงและมี SKU จำนวนมาก',
+          'Throughput ยังรองรับได้ด้วย Forklift และแรงงานปัจจุบัน',
+          'ต้องการลงทุนเป็นขั้นและปรับ Layout ได้ในอนาคต',
+          'พื้นที่มีความสูงหรือรูปทรงที่ยังไม่เหมาะกับเครื่องจักรอัตโนมัติ',
+        ],
+      },
+      {
+        heading: 'เมื่อใด Shuttle Rack ให้ความหนาแน่นมากกว่า',
+        paragraphs: [
+          'Shuttle Rack ใช้ Lane ที่ลึกขึ้นและให้รถ Shuttle เคลื่อนย้าย Pallet ภายในช่องจัดเก็บ จึงช่วยลดการขับ Forklift เข้าไปใน Rack และเพิ่ม Storage Density ได้เมื่อ SKU Profile เหมาะสม',
+        ],
+        bullets: [
+          'มีหลาย Pallet ต่อ SKU, Lot หรือ Batch และสามารถจัดกลุ่ม Lane ได้',
+          'ต้องการเพิ่ม Capacity ในพื้นที่เดิมโดยลดจำนวนทางวิ่งบางส่วน',
+          'ต้องการรองรับ FIFO หรือ LIFO ด้วยการออกแบบทิศทางรับเข้า-จ่ายออก',
+          'เป็น Cold Storage หรือพื้นที่ที่ต้องการลดเวลาทำงานของคนและ Forklift',
+        ],
+      },
+      {
+        heading: 'เมื่อใดควรศึกษา AS/RS อย่างจริงจัง',
+        paragraphs: [
+          'AS/RS เหมาะเมื่อโจทย์ไม่ได้มีเพียงจำนวนตำแหน่งจัดเก็บ แต่รวมถึงความเร็ว ความแม่นยำ การใช้พื้นที่แนวสูง และการเชื่อมข้อมูลกับระบบอื่น การออกแบบต้องพิจารณาทั้ง Rack, Stacker Crane หรือ Shuttle, Conveyor, WMS/WCS และแผนทำงานเมื่อระบบหยุด',
+        ],
+        bullets: [
+          'มี Target Capacity และ Peak Throughput ที่วัดได้',
+          'ต้องการใช้ความสูงอาคารและลด Forklift Traffic ในพื้นที่จัดเก็บหลัก',
+          'ต้องการ Inventory Accuracy, Traceability หรือการควบคุม Lot/Expiry ที่เป็นระบบ',
+          'พร้อมกำหนด Software Integration, Acceptance Test และทีม Maintenance',
+        ],
+      },
+      {
+        heading: 'ข้อมูลที่ต้องใช้เปรียบเทียบก่อนของบลงทุน',
+        bullets: [
+          'Layout, Clear Height, ตำแหน่งเสา ประตู และพื้นที่ Staging',
+          'ขนาดและน้ำหนัก Pallet รวมสินค้า พร้อมประเภท Pallet ที่ใช้งานจริง',
+          'จำนวน SKU, Pallet ต่อ SKU และ Inventory สูงสุดตามฤดูกาล',
+          'Inbound และ Outbound ปกติ รวมถึง Peak Pallet ต่อชั่วโมง',
+          'กฎ FIFO, FEFO, Lot Control และความต้องการเข้าถึงสินค้าแต่ละหน่วย',
+          'Timeline, งบประมาณเบื้องต้น และระบบ ERP/WMS ที่ต้องเชื่อมต่อ',
+        ],
+      },
+      {
+        heading: 'วิธีเลือกโดยไม่ลงทุนเกินความจำเป็น',
+        paragraphs: [
+          'เริ่มจากแบ่งสินค้าเป็นกลุ่มตาม SKU Profile และ Flow แล้วจัดทำ Concept อย่างน้อย 2 ทางเลือก เช่น Pallet Rack ทั้งคลัง เทียบกับ Shuttle เฉพาะ Fast-moving Zone หรือ AS/RS เฉพาะ Reserve Storage จากนั้นจึงเปรียบเทียบ Capacity, Throughput, พื้นที่, ความเสี่ยงในการปฏิบัติงาน และการขยายในอนาคตบนข้อมูลชุดเดียวกัน',
+          'ทีม Thailand สามารถรับ Layout และ Requirement เพื่อช่วยคัดกรองว่าควรเริ่มศึกษาระบบใดก่อนเข้าสู่การออกแบบและเสนอราคาโครงการ',
+        ],
+      },
+    ],
+    sources: [
+      {
+        label: 'Inform Storage Product Center',
+        href: 'https://en.informrack.com/products',
       },
       {
         label: 'Inform International Top Blog',
@@ -329,8 +432,8 @@ export function KnowledgeArticlePage({
     headline: article.title,
     description: article.description,
     image: `${siteUrl}${article.image}`,
-    datePublished: '2026-10-12',
-    dateModified: '2026-10-12',
+    datePublished: article.datePublished,
+    dateModified: article.dateModified,
     author: {
       '@type': 'Organization',
       name: 'INFORM-UMH (THAILAND) CO., LTD.',
@@ -428,7 +531,7 @@ export function KnowledgeArticlePage({
                 {article.title}
               </h1>
               <p className="mt-5 text-sm font-medium text-zinc-500">
-                {article.readingTime} · อัปเดต 12 ตุลาคม 2026
+                {article.readingTime} · อัปเดต {article.dateLabel}
               </p>
             </div>
             <div className="relative aspect-[16/10] overflow-hidden rounded-md border border-zinc-200 bg-white">

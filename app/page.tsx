@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import {
   ArrowRight,
   Building2,
@@ -789,6 +790,12 @@ const knowledgeLinks = [
     title: "Checklist ก่อนลงทุน Automation",
     desc: "รายการที่ฝ่ายจัดซื้อ วิศวกร และผู้บริหารควรตรวจให้ครบก่อนเริ่มโครงการ",
   },
+  {
+    href: "/knowledge/pallet-rack-vs-shuttle-vs-asrs",
+    label: "Warehouse System Comparison",
+    title: "Pallet Rack, Shuttle หรือ AS/RS",
+    desc: "เลือกแนวทางจาก SKU, capacity, throughput และความพร้อมของคลัง",
+  },
 ];
 
 type Lang = keyof typeof copy;
@@ -1441,13 +1448,13 @@ export default function Home() {
                 <p className="mt-4 text-sm leading-relaxed text-zinc-700">
                   {t.serviceAreaLead}
                 </p>
-                <a
+                <Link
                   href="/warehouse-racking-chonburi-eec"
                   className="mt-6 inline-flex items-center gap-2 rounded-xl bg-red-600 px-5 py-3 text-xs font-bold text-white transition hover:bg-red-500"
                 >
                   {t.serviceAreaCta}
                   <ArrowRight className="h-3.5 w-3.5" />
-                </a>
+                </Link>
               </div>
               <div className="grid gap-3 sm:grid-cols-2">
                 {serviceAreas.map((area) => (
@@ -1506,15 +1513,15 @@ export default function Home() {
                   คู่มือสำหรับทีมจัดซื้อ วิศวกร และผู้บริหารที่กำลังศึกษาโครงการระบบคลังสินค้าในประเทศไทย
                 </p>
               </div>
-              <a
+              <Link
                 href="/knowledge"
                 className="inline-flex shrink-0 items-center gap-2 text-sm font-bold text-red-600 hover:text-red-700"
               >
                 ดูบทความทั้งหมด
                 <ArrowRight className="h-4 w-4" />
-              </a>
+              </Link>
             </div>
-            <div className="mt-8 grid gap-6 lg:grid-cols-3">
+            <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
               {knowledgeLinks.map((article) => (
                 <a
                   key={article.href}
@@ -2021,4 +2028,3 @@ export default function Home() {
     </main>
   );
 }
-
