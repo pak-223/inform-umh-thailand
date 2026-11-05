@@ -99,8 +99,13 @@ const copy = {
     manufacturingLead:
       "Inform Storage Group มีฐานผลิตและทีมสนับสนุนในหลายพื้นที่ รวมถึง Thailand plant พร้อมสภาพแวดล้อมสำหรับทดสอบ Shuttle, AGV, Conveyor และ WMS/WCS ลูกค้าที่มีโปรเจกต์จริงสามารถนัดหมายเพื่อเยี่ยมชมโรงงานหรือดูแนวทางระบบก่อนตัดสินใจลงทุนได้",
     referencesTitle: "ตัวอย่างลูกค้าและเคสอ้างอิงระดับสากล",
+    referencesEyebrow: "ข้อมูลอ้างอิงจากบริษัทแม่",
     referencesLead:
-      "ดูตัวอย่างอุตสาหกรรมและโปรเจกต์ที่ Inform Storage Group เคยรองรับ เพื่อประเมินแนวทางที่อาจเหมาะกับคลังสินค้าในประเทศไทยของคุณ",
+      "ดูตัวอย่างระบบที่ Inform Storage Group เผยแพร่ในหลากหลายอุตสาหกรรม ตั้งแต่ยานยนต์ อาหารและเครื่องดื่ม ไปจนถึง Cold Chain, E-Commerce และระบบสาธารณูปโภค",
+    referenceCompanyLabel: "บริษัท",
+    referenceProjectLabel: "ระบบที่เผยแพร่",
+    referenceSourceNote: "ข้อมูลอ้างอิงจาก Customer Case ที่เผยแพร่โดย Inform Storage Group บริษัทแม่",
+    referenceSourceCta: "ดู Customer Case จากบริษัทแม่",
     sourceLink: "ดูข้อมูลบริษัทแม่",
     faqTitle: "คำถามที่พบบ่อยเกี่ยวกับการเริ่มโปรเจกต์คลังสินค้า",
     faqLead:
@@ -169,8 +174,13 @@ const copy = {
     manufacturingLead:
       "Inform Storage Group operates across multiple production bases, including a Thailand plant, with test environments for shuttle, AGV, conveyor, and WMS/WCS integrated systems. Qualified project teams can request a factory visit or system discussion before investment decisions.",
     referencesTitle: "Global customer and project references",
+    referencesEyebrow: "Parent Company References",
     referencesLead:
-      "Explore industries and project examples supported by Inform Storage Group, then share your Thailand warehouse requirements for a local project review.",
+      "Explore systems published by Inform Storage Group across automotive, food and beverage, cold chain, e-commerce, logistics, and public-service operations.",
+    referenceCompanyLabel: "Company",
+    referenceProjectLabel: "Published system",
+    referenceSourceNote: "Reference information is sourced from customer cases published by parent company Inform Storage Group.",
+    referenceSourceCta: "View parent customer cases",
     sourceLink: "View parent company profile",
     faqTitle: "Frequently asked questions for warehouse projects",
     faqLead:
@@ -239,8 +249,13 @@ const copy = {
     manufacturingLead:
       "Inform Storage Group 拥有多个生产基地，包括 Thailand plant，并具备穿梭车、AGV、输送线及 WMS/WCS 集成系统的测试环境。有实际项目需求的客户可预约参观工厂或进行系统方案交流。",
     referencesTitle: "全球客户与项目案例参考",
+    referencesEyebrow: "母公司公开案例",
     referencesLead:
-      "了解 Inform Storage Group 服务过的行业与项目类型，并将泰国仓库需求提交给本地团队进行方案评估。",
+      "了解 Inform Storage Group 在汽车、食品饮料、冷链、电商、物流及公共服务等行业公开的系统案例。",
+    referenceCompanyLabel: "客户公司",
+    referenceProjectLabel: "公开系统",
+    referenceSourceNote: "参考信息来自母公司 Inform Storage Group 公开发布的客户案例。",
+    referenceSourceCta: "查看母公司客户案例",
     sourceLink: "查看母公司资料",
     faqTitle: "仓储项目常见问题",
     faqLead:
@@ -438,28 +453,55 @@ const manufacturingHighlights = [
   },
 ];
 
-const referenceCustomers = [
-  "FAW-Volkswagen",
-  "SAIC-Volkswagen",
-  "GM",
-  "Chery Automobile",
-  "Beijing Benz-Daimler-Chrysler",
-  "Dongfeng Honda Engine",
-  "Bosch Automotive Products (Changsha)",
-  "CSR Changchun Railway Coach Group",
-  "Zhengzhou Yutong Bus Group",
-  "BYD Automobile",
-  "Yili Foods",
-  "Lenovo Mobile Communications",
-];
-
 const referenceCases = [
-  "Nanjing Water Palletized four-way shuttle",
-  "Nentech stacker shuttle",
-  "Sunyu Double Reach two-way tote shuttle",
-  "FAW Fusheng Palletized four-way shuttle",
-  "FAWSN Group Four-way Tote Shuttle",
-  "Wellcome shuttle garage",
+  {
+    industry: { th: "ยานยนต์", en: "Automotive", zh: "汽车行业" },
+    company: "FAW (Hongqi)",
+    project: "Stacker crane system",
+    href: "https://www.inform-international.com/customer/automobile-industry/",
+  },
+  {
+    industry: { th: "อาหารและเครื่องดื่ม", en: "Food & Beverage", zh: "食品饮料" },
+    company: "Coca-Cola (Qingdao)",
+    project: "Radio shuttle system",
+    href: "https://www.inform-international.com/customer/food-and-beverage-industry/",
+  },
+  {
+    industry: { th: "คลังสินค้าแช่เย็น", en: "Cold Chain", zh: "冷链行业" },
+    company: "Hangzhou Comprehensive Bonded Zone Cold Chain Management Co., Ltd.",
+    project: "Stacker crane + shuttle",
+    href: "https://www.inform-international.com/customer/cold-chain-industry/",
+  },
+  {
+    industry: { th: "อีคอมเมิร์ซ", en: "E-Commerce", zh: "电子商务" },
+    company: "Vipshop",
+    project: "Multi shuttle system",
+    href: "https://www.inform-international.com/customer/e-commerce-industry/",
+  },
+  {
+    industry: { th: "โลจิสติกส์", en: "Logistics", zh: "物流行业" },
+    company: "Huayu Logistics",
+    project: "Four way radio shuttle system",
+    href: "https://www.inform-international.com/customer/logistics-industry/",
+  },
+  {
+    industry: { th: "เวชภัณฑ์และยา", en: "Pharmaceuticals", zh: "医药行业" },
+    company: "Guangzhou Pharmaceuticals Co., Ltd.",
+    project: "Radio shuttle system",
+    href: "https://www.inform-international.com/customer/pharmaceuticals-industry/",
+  },
+  {
+    industry: { th: "การแพทย์", en: "Medical", zh: "医疗行业" },
+    company: "INTCO",
+    project: "Stacker crane + two way shuttle",
+    href: "https://www.inform-international.com/customer/medical-industry/",
+  },
+  {
+    industry: { th: "ระบบสาธารณูปโภค", en: "Public Services", zh: "公共服务" },
+    company: "Nanjing Tap Water General Company",
+    project: "Four way radio shuttle + AGV",
+    href: "https://www.inform-international.com/customer/public-services/",
+  },
 ];
 
 const faqs = [
@@ -1383,11 +1425,11 @@ export default function Home() {
       </section>
 
       {/* PARENT REFERENCES */}
-      <section className="border-t border-zinc-200 bg-white py-20">
+      <section id="references" className="border-t border-zinc-200 bg-white py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="text-xs font-bold uppercase tracking-widest text-red-600">
-              Parent Company References
+              {t.referencesEyebrow}
             </span>
             <h2 className="mt-2 text-3xl font-bold tracking-tight text-zinc-950 sm:text-4xl">
               {t.referencesTitle}
@@ -1395,36 +1437,53 @@ export default function Home() {
             <p className="mt-4 text-sm leading-relaxed text-zinc-700">{t.referencesLead}</p>
           </div>
 
-          <div className="mt-10 grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
-            <div className="rounded-2xl border border-zinc-200 bg-zinc-50 p-6">
-              <p className="text-xs font-bold uppercase tracking-widest text-zinc-600">
-                Customer Names Published by Inform Storage Group
-              </p>
-              <div className="mt-5 flex flex-wrap gap-2">
-                {referenceCustomers.map((customer) => (
-                  <span
-                    key={customer}
-                    className="rounded-full border border-zinc-200 bg-white px-3 py-1.5 text-xs font-semibold text-zinc-800"
-                  >
-                    {customer}
+          <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {referenceCases.map((caseItem, index) => (
+              <a
+                key={`${caseItem.company}-${caseItem.project}`}
+                href={caseItem.href}
+                target="_blank"
+                rel="noreferrer"
+                className="group relative overflow-hidden rounded-2xl border border-zinc-200 bg-white p-5 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-red-200 hover:shadow-xl hover:shadow-zinc-200/70"
+              >
+                <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-red-600 via-red-500 to-red-300" />
+                <div className="flex items-start justify-between gap-3">
+                  <span className="rounded-full bg-red-50 px-3 py-1 text-[10px] font-bold uppercase tracking-wider text-red-700">
+                    {caseItem.industry[lang]}
                   </span>
-                ))}
-              </div>
-            </div>
+                  <span className="text-xs font-bold text-zinc-300">{String(index + 1).padStart(2, "0")}</span>
+                </div>
 
-            <div className="grid gap-3 sm:grid-cols-2">
-              {referenceCases.map((caseName) => (
-                <div
-                  key={caseName}
-                  className="rounded-2xl border border-zinc-200 bg-white p-5 shadow-lg shadow-zinc-200/60"
-                >
-                  <p className="text-sm font-bold text-zinc-950">{caseName}</p>
-                  <p className="mt-2 text-xs text-zinc-600">
-                    Global project case shared by Inform Storage Group.
+                <div className="mt-5">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">
+                    {t.referenceCompanyLabel}
+                  </p>
+                  <h3 className="mt-1 text-base font-bold leading-snug text-zinc-950 group-hover:text-red-700">
+                    {caseItem.company}
+                  </h3>
+                </div>
+
+                <div className="mt-5 border-t border-zinc-100 pt-4">
+                  <p className="text-[10px] font-bold uppercase tracking-widest text-zinc-500">
+                    {t.referenceProjectLabel}
+                  </p>
+                  <p className="mt-1 flex items-start gap-2 text-sm font-semibold leading-6 text-zinc-800">
+                    <Workflow className="mt-1 h-4 w-4 flex-none text-red-600" />
+                    {caseItem.project}
                   </p>
                 </div>
-              ))}
-            </div>
+
+                <span className="mt-5 inline-flex items-center gap-1 text-xs font-bold text-red-700">
+                  Inform Storage Group
+                  <ExternalLink className="h-3 w-3" />
+                </span>
+              </a>
+            ))}
+          </div>
+
+          <div className="mx-auto mt-7 flex max-w-3xl items-start gap-3 rounded-2xl border border-red-100 bg-red-50/70 p-4 text-left">
+            <ShieldCheck className="mt-0.5 h-5 w-5 flex-none text-red-600" />
+            <p className="text-xs leading-6 text-zinc-700">{t.referenceSourceNote}</p>
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -1436,12 +1495,12 @@ export default function Home() {
               {t.primaryCta}
             </a>
             <a
-              href="https://en.informrack.com/case.aspx?nid=4&typeid=202"
+              href="https://www.inform-international.com/customer/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center justify-center gap-2 rounded-xl border border-zinc-300 bg-white px-5 py-3 text-xs font-bold text-zinc-950 transition hover:border-red-300 hover:text-red-700"
             >
-              {t.sourceLink}
+              {t.referenceSourceCta}
               <ExternalLink className="h-3.5 w-3.5 text-red-600" />
             </a>
           </div>
