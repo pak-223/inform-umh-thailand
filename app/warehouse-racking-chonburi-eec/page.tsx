@@ -141,7 +141,7 @@ export default function ChonburiEecPage() {
 
       <section className="relative overflow-hidden bg-zinc-50 px-4 py-20 sm:px-6 lg:px-8">
         <Image
-          src="/assets/parent-site/full-system-overview.png"
+          src="/assets/parent-site/full-system-overview.webp"
           alt="ระบบคลังสินค้าอัตโนมัติ AS/RS Shuttle Stacker Crane สำหรับโรงงานในชลบุรีและ EEC"
           fill
           priority

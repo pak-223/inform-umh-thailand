@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       'ส่ง Layout หรือ Requirement ให้ทีม INFORM-UMH Thailand ประเมินระบบ Racking, AS/RS, Shuttle, Stacker Crane และ WMS/WCS',
     url: '/',
     siteName: 'INFORM-UMH Thailand',
-    images: ['/assets/parent-site/full-system-overview.png'],
+    images: ['/assets/parent-site/full-system-overview.webp'],
     locale: 'th_TH',
     type: 'website',
   },
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
     title: 'ระบบคลังสินค้าอัตโนมัติ AS/RS และชั้นวางสินค้า | INFORM-UMH Thailand',
     description:
       'โซลูชัน Racking, AS/RS, Shuttle, Stacker Crane, AGV และ WMS/WCS พร้อมทีมงานดูแลโครงการในประเทศไทย',
-    images: ['/assets/parent-site/full-system-overview.png'],
+    images: ['/assets/parent-site/full-system-overview.webp'],
   },
 };
 

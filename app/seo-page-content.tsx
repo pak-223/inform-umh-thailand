@@ -95,7 +95,7 @@ export const seoPages: SeoPageConfig[] = [
     eyebrow: "AS/RS Warehouse Automation",
     lead:
       "เหมาะกับทีมที่ต้องการเพิ่มความแม่นยำ ลด dependency จาก forklift ใช้พื้นที่แนวสูง และเชื่อมข้อมูล inventory กับระบบคลังสินค้าอัตโนมัติ",
-    image: "/assets/parent-site/full-system-overview.png",
+    image: "/assets/parent-site/full-system-overview.webp",
     imageAlt: "ภาพรวมระบบคลังสินค้าอัตโนมัติ AS/RS shuttle stacker crane conveyor AGV",
     fitTitle: "AS/RS เหมาะเมื่อมีสัญญาณเหล่านี้",
     fitPoints: [
@@ -303,7 +303,7 @@ export const seoPages: SeoPageConfig[] = [
     eyebrow: "Storage Capacity Optimization",
     lead:
       "ถ้าคลังเริ่มเต็ม forklift วิ่งยาก หรือ capacity ไม่พอต่อแผนผลิต ทีม Thailand ช่วยดู layout และแนะนำว่าจะเริ่มจากปรับ racking, shuttle หรือ automation ดี",
-    image: "/assets/parent-site/full-system-overview.png",
+    image: "/assets/parent-site/full-system-overview.webp",
     imageAlt: "แนวทางเพิ่มพื้นที่จัดเก็บคลังสินค้า pallet capacity และ automation",
     fitTitle: "สัญญาณว่าควรประเมิน layout ใหม่",
     fitPoints: [
@@ -355,7 +355,7 @@ export const seoPages: SeoPageConfig[] = [
     eyebrow: "Factory Visit / Project Review",
     lead:
       "โปรเจกต์คลังสินค้าเป็นการลงทุนใหญ่ ลูกค้าไม่จำเป็นต้องตัดสินใจจากหน้าเว็บเพียงอย่างเดียว หากมี layout หรือ requirement เบื้องต้น สามารถนัดหมายกับทีม Thailand เพื่อคุยโจทย์ ดูแนวทางระบบ และวางแผนเยี่ยมชมโรงงานหรือ reference ที่เกี่ยวข้องได้",
-    image: "/assets/parent-site/full-system-overview.png",
+    image: "/assets/parent-site/full-system-overview.webp",
     imageAlt: "นัดเยี่ยมชมโรงงานและดูระบบคลังสินค้าอัตโนมัติ AS/RS shuttle stacker crane",
     fitTitle: "เหมาะกับใคร",
     fitPoints: [

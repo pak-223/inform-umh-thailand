@@ -42,7 +42,7 @@ export const knowledgeArticles: KnowledgeArticle[] = [
     description:
       'ระบบ AS/RS ไม่มีราคากลางเดียว ดูปัจจัยกำหนดงบและรายการข้อมูลที่โรงงานควรเตรียมก่อนขอประเมินระบบคลังสินค้าอัตโนมัติในไทย',
     eyebrow: 'AS/RS Project Guide',
-    image: '/assets/parent-site/full-system-overview.png',
+    image: '/assets/parent-site/full-system-overview.webp',
     imageAlt: 'ภาพรวมระบบ AS/RS และคลังสินค้าอัตโนมัติ',
     answer:
       'ระบบ AS/RS ไม่มีราคามาตรฐานที่ใช้ได้กับทุกคลัง เพราะขอบเขตลงทุนขึ้นอยู่กับจำนวนตำแหน่งจัดเก็บ ความเร็วรับเข้า-จ่ายออก ความสูงอาคาร ประเภทเครื่องจักร และการเชื่อมต่อซอฟต์แวร์ วิธีเริ่มที่แม่นยำที่สุดคือส่ง Layout พร้อมข้อมูล Pallet, Capacity และ Throughput ให้ทีมวิศวกรรมประเมินแนวทางระบบก่อนจัดงบประมาณ',

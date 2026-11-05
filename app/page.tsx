@@ -393,7 +393,7 @@ const visualHighlights = [
   {
     title: "Integrated AS/RS + Shuttle + AGV Warehouse",
     subtitle: "ภาพรวมระบบคลังอัตโนมัติครบชุด",
-    image: "/assets/parent-site/full-system-overview.png",
+    image: "/assets/parent-site/full-system-overview.webp",
   },
   {
     title: "Shuttle Rack Storage System",
@@ -821,7 +821,7 @@ export default function Home() {
       {/* HERO SECTION */}
       <section id="top" className="relative flex min-h-[92svh] items-center overflow-hidden bg-zinc-50 pt-24 pb-16">
         <Image
-          src="/assets/parent-site/full-system-overview.png"
+          src="/assets/parent-site/full-system-overview.webp"
           alt="Integrated automated warehouse system overview"
           fill
           priority
@@ -975,7 +975,7 @@ export default function Home() {
             <div className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-2xl shadow-zinc-200/80">
               <div className="relative aspect-[16/9] bg-white">
                 <Image
-                  src="/assets/parent-site/full-system-overview.png"
+                  src="/assets/parent-site/full-system-overview.webp"
                   alt="Full warehouse automation solution overview with AS/RS, shuttle, AGV, conveyor, and monitoring system"
                   fill
                   sizes="(min-width: 1024px) 58vw, 100vw"

@@ -14,7 +14,7 @@ export const metadata: Metadata = {
     description: 'คู่มือวางแผนระบบคลังสินค้าอัตโนมัติสำหรับโครงการในประเทศไทย',
     url: '/knowledge',
     type: 'website',
-    images: ['/assets/parent-site/full-system-overview.png'],
+    images: ['/assets/parent-site/full-system-overview.webp'],
   },
 };
 
