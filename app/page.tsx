@@ -115,6 +115,11 @@ const copy = {
     referenceProjectLabel: "ระบบที่เผยแพร่",
     referenceSourceNote: "ข้อมูลอ้างอิงจาก Customer Case ที่เผยแพร่โดย Inform Storage Group บริษัทแม่",
     referenceSourceCta: "ดู Customer Case จากบริษัทแม่",
+    referenceVideosTitle: "วิดีโอโครงการและตัวอย่างระบบตามอุตสาหกรรม",
+    referenceVideosLead:
+      "คลิปจากช่องทางการของ Inform Storage Group โดยระบุให้ชัดว่าเป็นคลิปลูกค้าที่มีชื่อในวิดีโอ หรือเป็นตัวอย่างระบบในอุตสาหกรรมเดียวกัน",
+    referenceNamedVideo: "คลิปลูกค้าที่ระบุชื่อ",
+    referenceIndustryVideo: "ตัวอย่างระบบในอุตสาหกรรม",
     sourceLink: "ดูข้อมูลบริษัทแม่",
     faqTitle: "คำถามที่พบบ่อยเกี่ยวกับการเริ่มโปรเจกต์คลังสินค้า",
     faqLead:
@@ -197,6 +202,11 @@ const copy = {
     referenceProjectLabel: "Published system",
     referenceSourceNote: "Reference information is sourced from customer cases published by parent company Inform Storage Group.",
     referenceSourceCta: "View parent customer cases",
+    referenceVideosTitle: "Project and industry application videos",
+    referenceVideosLead:
+      "Official Inform Storage Group videos, clearly identified as either a named-customer video or an application example from the same industry.",
+    referenceNamedVideo: "Named-customer video",
+    referenceIndustryVideo: "Industry application example",
     sourceLink: "View parent company profile",
     faqTitle: "Frequently asked questions for warehouse projects",
     faqLead:
@@ -279,6 +289,11 @@ const copy = {
     referenceProjectLabel: "公开系统",
     referenceSourceNote: "参考信息来自母公司 Inform Storage Group 公开发布的客户案例。",
     referenceSourceCta: "查看母公司客户案例",
+    referenceVideosTitle: "项目与行业应用视频",
+    referenceVideosLead:
+      "视频来自 Inform Storage Group 官方频道，并明确区分为具名客户视频或同行业系统应用示例。",
+    referenceNamedVideo: "具名客户视频",
+    referenceIndustryVideo: "行业应用示例",
     sourceLink: "查看母公司资料",
     faqTitle: "仓储项目常见问题",
     faqLead:
@@ -575,6 +590,36 @@ const referenceCases = [
     company: "Nanjing Tap Water General Company",
     project: "Four way radio shuttle + AGV",
     href: "https://www.inform-international.com/customer/public-services/",
+  },
+];
+
+const referenceVideos = [
+  {
+    id: "uc8qn7yUtcQ",
+    relation: "named" as const,
+    title: {
+      th: "Four-Way Radio Shuttle สำหรับ FAW",
+      en: "Four-way radio shuttle for FAW",
+      zh: "FAW 四向穿梭车项目",
+    },
+  },
+  {
+    id: "9Vr11ZM7idU",
+    relation: "industry" as const,
+    title: {
+      th: "Radio Shuttle System สำหรับอุตสาหกรรมเครื่องดื่ม",
+      en: "Radio shuttle system for the beverage industry",
+      zh: "饮料行业无线穿梭车系统",
+    },
+  },
+  {
+    id: "u949fE-cIvk",
+    relation: "industry" as const,
+    title: {
+      th: "Shuttle Mover System สำหรับ Food Cold Chain",
+      en: "Shuttle mover system for food cold chain",
+      zh: "食品冷链穿梭母车系统",
+    },
   },
 ];
 
@@ -1631,6 +1676,54 @@ export default function Home() {
                 </span>
               </a>
             ))}
+          </div>
+
+          <div className="mt-14 rounded-3xl border border-zinc-200 bg-zinc-50 p-5 sm:p-8">
+            <div className="mx-auto max-w-3xl text-center">
+              <span className="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-red-600">
+                <PlayCircle className="h-4 w-4" />
+                Inform Storage Group
+              </span>
+              <h3 className="mt-3 text-2xl font-bold tracking-tight text-zinc-950 sm:text-3xl">
+                {t.referenceVideosTitle}
+              </h3>
+              <p className="mt-3 text-sm leading-7 text-zinc-600">{t.referenceVideosLead}</p>
+            </div>
+
+            <div className="mt-8 grid gap-5 lg:grid-cols-3">
+              {referenceVideos.map((video) => (
+                <article
+                  key={video.id}
+                  className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg shadow-zinc-200/60"
+                >
+                  <div className="aspect-video bg-zinc-950">
+                    <iframe
+                      className="h-full w-full"
+                      src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0`}
+                      title={video.title[lang]}
+                      loading="lazy"
+                      referrerPolicy="strict-origin-when-cross-origin"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                      allowFullScreen
+                    />
+                  </div>
+                  <div className="p-5">
+                    <span
+                      className={`inline-flex rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider ${
+                        video.relation === "named"
+                          ? "bg-red-50 text-red-700"
+                          : "bg-zinc-100 text-zinc-700"
+                      }`}
+                    >
+                      {video.relation === "named" ? t.referenceNamedVideo : t.referenceIndustryVideo}
+                    </span>
+                    <h4 className="mt-3 text-base font-bold leading-7 text-zinc-950">
+                      {video.title[lang]}
+                    </h4>
+                  </div>
+                </article>
+              ))}
+            </div>
           </div>
 
           <div className="mx-auto mt-7 flex max-w-3xl items-start gap-3 rounded-2xl border border-red-100 bg-red-50/70 p-4 text-left">
