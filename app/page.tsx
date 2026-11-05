@@ -99,6 +99,8 @@ const copy = {
     videosLead:
       "ทำความเข้าใจภาพรวมระบบ Racking, AS/RS, Stacker Crane และ Shuttle ผ่านวิดีโอที่เผยแพร่โดย Inform Storage Group ก่อนส่ง Layout ให้ทีม Thailand ประเมินแนวทางโครงการ",
     videosSourceCta: "ดูวิดีโอทั้งหมดจากช่องทางการ",
+    videosShowMore: "ดูวิดีโอเพิ่มเติมอีก 3 คลิป",
+    videosShowLess: "แสดงเฉพาะคลิปแนะนำ",
     parentSystemsTitle: "เลือกโซลูชันให้เหมาะกับรูปแบบคลังสินค้าของคุณ",
     parentSystemsLead:
       "Inform มีระบบให้เลือกตั้งแต่โซลูชันกึ่งอัตโนมัติสำหรับเพิ่มความจุ ไปจนถึงระบบคลังสินค้าอัตโนมัติเต็มรูปแบบสำหรับงานที่ต้องการ throughput และความแม่นยำสูง",
@@ -179,6 +181,8 @@ const copy = {
     videosLead:
       "Explore racking, AS/RS, stacker crane, and shuttle solutions through videos published by Inform Storage Group, then share your layout with the Thailand team for a project review.",
     videosSourceCta: "View all official videos",
+    videosShowMore: "Show 3 more videos",
+    videosShowLess: "Show featured videos only",
     parentSystemsTitle: "Select the right solution for your warehouse operation",
     parentSystemsLead:
       "Inform offers a practical range of systems, from semi-automated storage upgrades to fully automated warehouse solutions for higher-throughput operations.",
@@ -259,6 +263,8 @@ const copy = {
     videosLead:
       "通过 Inform Storage Group 官方视频了解货架、AS/RS、堆垛机与穿梭车系统，并将仓库平面图提交给泰国团队进行项目评估。",
     videosSourceCta: "查看全部官方视频",
+    videosShowMore: "再看 3 个视频",
+    videosShowLess: "仅显示精选视频",
     parentSystemsTitle: "为您的仓储运营选择合适的系统方案",
     parentSystemsLead:
       "Inform 提供从半自动化存储升级到全自动化立体仓库的多种系统选择，适用于高效率、高吞吐量的仓储运营场景。",
@@ -467,6 +473,30 @@ const parentVideos = [
       th: "ตัวอย่างระบบ Pallet Two-Way Shuttle + Stacker Crane",
       en: "Pallet two-way shuttle and stacker crane case",
       zh: "托盘双向穿梭车与堆垛机系统案例",
+    },
+  },
+  {
+    id: "WRfv9J30IQw",
+    title: {
+      th: "การทำงานของระบบ Four-Way Pallet Shuttle",
+      en: "Four-way pallet shuttle system in operation",
+      zh: "四向托盘穿梭车系统运行展示",
+    },
+  },
+  {
+    id: "m9JG0Z-KT3E",
+    title: {
+      th: "การทำงานของระบบ Multi Shuttle Warehouse",
+      en: "How the multi-shuttle warehouse operates",
+      zh: "多层穿梭车仓库运行原理",
+    },
+  },
+  {
+    id: "5m_j2djzDrk",
+    title: {
+      th: "Shuttle และ Shuttle Mover สำหรับคลังสินค้าแช่เย็น",
+      en: "Shuttle and shuttle mover system for cold warehouses",
+      zh: "冷库穿梭车与穿梭母车系统",
     },
   },
 ];
@@ -834,6 +864,7 @@ export default function Home() {
   const [lang, setLang] = useState<Lang>("th");
   const [activeTab, setActiveTab] = useState<string>("racking");
   const [qrModal, setQrModal] = useState<"line" | "wechat" | null>(null);
+  const [showMoreVideos, setShowMoreVideos] = useState(false);
 
   const t = copy[lang];
 
@@ -1118,8 +1149,8 @@ export default function Home() {
             <p className="mt-4 text-sm leading-relaxed text-zinc-700">{t.videosLead}</p>
           </div>
 
-          <div className="mt-10 grid gap-5 lg:grid-cols-3">
-            {parentVideos.map((video) => (
+          <div id="video-grid" className="mt-10 grid gap-5 lg:grid-cols-3">
+            {parentVideos.slice(0, showMoreVideos ? parentVideos.length : 3).map((video) => (
               <article
                 key={video.id}
                 className="overflow-hidden rounded-2xl border border-zinc-200 bg-white shadow-lg shadow-zinc-200/60"
@@ -1145,6 +1176,19 @@ export default function Home() {
                 </div>
               </article>
             ))}
+          </div>
+
+          <div className="mt-6 flex justify-center">
+            <button
+              type="button"
+              onClick={() => setShowMoreVideos((current) => !current)}
+              aria-expanded={showMoreVideos}
+              aria-controls="video-grid"
+              className="inline-flex items-center justify-center gap-2 rounded-xl border border-red-200 bg-red-50 px-5 py-3 text-xs font-bold text-red-700 transition hover:border-red-300 hover:bg-red-100"
+            >
+              <PlayCircle className="h-4 w-4" />
+              {showMoreVideos ? t.videosShowLess : t.videosShowMore}
+            </button>
           </div>
 
           <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
